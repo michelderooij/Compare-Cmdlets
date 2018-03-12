@@ -39,6 +39,7 @@
     Revision History
     --------------------------------------------------------------------------------
     1.0     Initial community release
+    1.01    Some changes in output format
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -105,7 +106,8 @@ If ( -not $Export) {
         Switch ( $Item.SideIndicator) {
             '=>' {
                 $Obj = New-Object -TypeName PSCustomObject -Property @{
-                    'Change'     = 'New Cmdlet'
+                    'Change'     = 'New'
+                    'Type'       = 'Cmdlet'
                     'Cmdlet'     = $Item.Name
                     'Parameters' = ($Item.Parameters.GetEnumerator() | ForEach-Object { $_.Name} | Where-Object {$SkipParams -notcontains $_} | Sort-Object ) -join ','
                 }
@@ -113,7 +115,8 @@ If ( -not $Export) {
             }
             '<=' {
                 $Obj = New-Object -TypeName PSCustomObject -Property @{
-                    'Change'     = 'Removed Cmdlet'
+                    'Change'     = 'Removed'
+                    'Type'       = 'Cmdlet'
                     'Cmdlet'     = $Item.Name
                     'Parameters' = ''
                 }
@@ -132,7 +135,8 @@ If ( -not $Export) {
                         Switch ( $Param.SideIndicator) {
                             '=>' {
                                 $Obj = New-Object -TypeName PSCustomObject -Property @{
-                                    'Change'    = 'New parameter'
+                                    'Change'    = 'New'
+                                    'Type'      = 'Parameter'
                                     'Cmdlet'    = $Item.Name
                                     'Parameter' = ('{0}' -f $Param.InputObject)
                                 }
@@ -140,7 +144,8 @@ If ( -not $Export) {
                             }
                             '<=' {
                                 $Obj = New-Object -TypeName PSCustomObject -Property @{
-                                    'Change'    = 'Removed parameter'
+                                    'Change'    = 'Removed'
+                                    'Type'      = 'Parameter'
                                     'Cmdlet'    = $Item.Name
                                     'Parameter' = ('{0}' -f $Param.InputObject)
                                 }
