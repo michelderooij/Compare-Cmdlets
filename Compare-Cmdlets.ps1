@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.0, March 12th, 2018
+    Version 1.02, March 20th, 2018
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -40,6 +40,7 @@
     --------------------------------------------------------------------------------
     1.0     Initial community release
     1.01    Some changes in output format
+    1.02    Added handling of not connected AzureAD session
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -184,7 +185,12 @@ Else {
     }
 
     If ( Get-Command Get-AzureADUser -ErrorAction SilentlyContinue) {
-        $User = (Get-AzureADCurrentSessionInfo).Account
+	Try {
+        	$User = (Get-AzureADCurrentSessionInfo).Account
+	}
+	Catch {
+		$User = 'NotConnected'
+	}
         $Module = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Module -FullyQualifiedName $Module -ListAvailable).Version
