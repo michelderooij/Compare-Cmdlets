@@ -44,6 +44,7 @@
     1.02    Added handling of not connected AzureAD session
     1.03    Added Microsoft Teams
             Removed timestamp from export files (version should do)
+            Fixed version reporting when multiple versions are installed
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -87,21 +88,21 @@ If ( -not $Export) {
 
     $SkipParams = @('Debug', 'ErrorAction', 'ErrorVariable', 'OutVariable', 'OutBuffer', 'Verbose', 'WarningAction', 'WarningVariable', 'AsJob', 'Confirm', 'PipelineVariable', 'WhatIf')
 
-    Write-Verbose ('Reading cmdlets from {0}' -f $ReferenceCmds)
+    Write-Output ('Reading cmdlets from {0}' -f $ReferenceCmds)
     $Cmds1 = Import-CliXml -Path $ReferenceCmds | Select-Object Name, Parameters | Sort-Object Name
     If ( !$Cmds1) {
         Throw ('File {0} does not seem to contain any cmdlet information' -f $ReferenceCmds)
     }
-    Write-Verbose ('Reference set contains {0} cmdlets.' -f $Cmds1.Count)
+    Write-Output ('Reference set contains {0} cmdlets.' -f $Cmds1.Count)
 
-    Write-Verbose ('Reading cmdlets from {0}' -f $DifferenceCmds)
+    Write-Output ('Reading cmdlets from {0}' -f $DifferenceCmds)
     $Cmds2 = Import-CliXml -Path $DifferenceCmds | Select-Object Name, Parameters | Sort-Object Name
     If ( !$Cmds2) {
         Throw ('File {0} does not seem to contain any cmdlet information' -f $DifferenceCmds)
     }
-    Write-Verbose ('Difference set contains {0} cmdlets.' -f $Cmds2.Count)
+    Write-Output ('Difference set contains {0} cmdlets.' -f $Cmds2.Count)
 
-    Write-Verbose 'Comparing cmdlet sets ..'
+    Write-Output 'Comparing cmdlet sets ..'
     $Diff = Compare-Object -ReferenceObject $Cmds1 -DifferenceObject $Cmds2 -Property Name -IncludeEqual -PassThru
     $Max = $Diff.Count
     $Num = 0
@@ -175,12 +176,17 @@ Else {
         $User = ((Get-PsSession | Where-Object {$_.ConfigurationName -eq 'Microsoft.Exchange' -and $_.State -eq 'Opened' -and $_.Availability -eq 'Available'} | Sort-Object Id -Descending) | Select-Object -First 1).Runspace.ConnectionInfo.Credential.UserName
         $Module = (Get-Command Get-Mailbox -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
-        $Version = (Get-Module -FullyQualifiedName $Module).Version
+        $Version = (Get-Command Get-Mailbox -ErrorAction SilentlyContinue ).Version
         $null = [string]((Get-OrganizationConfig).AdminDisplayVersion) -match '^.*\((?<build>[\d\.]+)\)$'
         $Build = $matches.build
         $File = 'ExchangeOnline-{0}.xml' -f $Build
-        Write-Verbose ('Storing Exchange Online cmdlets in {0}' -f $File)
-        $Cmdlets | Export-CliXml -Path $File
+	If( -not( Test-Path -Path $File)) {
+        	Write-Output ('Storing Exchange Online cmdlets in {0}' -f $File)
+	        $Cmdlets | Export-CliXml -Path $File
+	}
+	Else {
+		Write-Warning ('File {0} already exists' -f $File)
+	}
     }
     Else {
         Write-Warning 'Exchange cmdlets not available, skipping'
@@ -195,10 +201,15 @@ Else {
 	}
         $Module = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
-        $Version = (Get-Module -FullyQualifiedName $Module -ListAvailable).Version
+        $Version = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Version
         $File = 'AzureAD-{0}.xml' -f $Version
-        Write-Verbose ('Storing Azure AD cmdlets in {0}' -f $File)
-        $Cmdlets | Export-CliXml -Path $File
+	If( -not( Test-Path -Path $File)) {
+        	Write-Output ('Storing Azure AD cmdlets in {0}' -f $File)
+        	$Cmdlets | Export-CliXml -Path $File
+	}
+	Else {
+		Write-Warning ('File {0} already exists' -f $File)
+	}
     }
     Else {
         Write-Warning 'Azure AD cmdlets not available, skipping'
@@ -208,10 +219,15 @@ Else {
 	$User = 'NA'
         $Module = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
-        $Version = (Get-Module -FullyQualifiedName $Module -ListAvailable).Version
+        $Version = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Version
         $File = 'MicrosoftTeams-{0}.xml' -f $Version
-        Write-Verbose ('Storing Microsoft Teams cmdlets in {0}' -f $File)
-        $Cmdlets | Export-CliXml -Path $File
+	If( -not( Test-Path -Path $File)) {
+        	Write-Output ('Storing Microsoft Teams cmdlets in {0}' -f $File)
+        	$Cmdlets | Export-CliXml -Path $File
+	}
+	Else {
+		Write-Warning ('File {0} already exists' -f $File)
+	}
     }
     Else {
         Write-Warning 'Microsoft Teams not available, skipping'
