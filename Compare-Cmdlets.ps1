@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.02, March 20th, 2018
+    Version 1.03, April 26th, 2018
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -41,6 +41,8 @@
     1.0     Initial community release
     1.01    Some changes in output format
     1.02    Added handling of not connected AzureAD session
+    1.03    Added Microsoft Teams
+            Removed timestamp from export files (version should do)
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -57,7 +59,7 @@
 
     .EXAMPLE
     Compare two sets of cmdlets and show which cmdlets and parameters are new or removed
-    .\Compare-Cmdlets.ps1 -ReferenceCmds .\201803011416-ExchangeOnline-15.20.527.22.xml -DifferenceCmds .\201803121707-ExchangeOnline-15.20.548.21.xml
+    .\Compare-Cmdlets.ps1 -ReferenceCmds .\ExchangeOnline-15.20.527.22.xml -DifferenceCmds .\ExchangeOnline-15.20.548.21.xml
 
 #>
 #Version 3.0
@@ -175,8 +177,7 @@ Else {
         $Version = (Get-Module -FullyQualifiedName $Module).Version
         $null = [string]((Get-OrganizationConfig).AdminDisplayVersion) -match '^.*\((?<build>[\d\.]+)\)$'
         $Build = $matches.build
-        $Timestamp = get-date -Format 'yyyyMMddHHmm'
-        $File = '{0}-ExchangeOnline-{1}.xml' -f $Timestamp, $Build
+        $File = 'ExchangeOnline-{0}.xml' -f $Build
         Write-Verbose ('Storing Exchange Online cmdlets in {0}' -f $File)
         $Cmdlets | Export-CliXml -Path $File
     }
@@ -186,21 +187,33 @@ Else {
 
     If ( Get-Command Get-AzureADUser -ErrorAction SilentlyContinue) {
 	Try {
-        	$User = (Get-AzureADCurrentSessionInfo).Account
+        	$User = (Get-AzureADCurrentSessionInfo -ErrorAction SilentlyContinue).Account
 	}
 	Catch {
-		$User = 'NotConnected'
+		$User = 'Disconnected'
 	}
         $Module = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
-        $Version = (Get-Module -FullyQualifiedName $Module -ListAvailable).Version
-        $Timestamp = get-date -Format 'yyyyMMddHHmm'
-        $File = '{0}-AzureAD-{1}.xml' -f $Timestamp, $Version
+        $Version = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Version
+        $File = 'AzureAD-{0}.xml' -f $Version
         Write-Verbose ('Storing Azure AD cmdlets in {0}' -f $File)
         $Cmdlets | Export-CliXml -Path $File
     }
     Else {
         Write-Warning 'Azure AD cmdlets not available, skipping'
+    }
+
+    If ( Get-Command Get-Team -ErrorAction SilentlyContinue) {
+	$User = 'NA'
+        $Module = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Source
+        $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
+        $Version = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Version
+        $File = 'MicrosoftTeams-{0}.xml' -f $Version
+        Write-Verbose ('Storing Microsoft Teams cmdlets in {0}' -f $File)
+        $Cmdlets | Export-CliXml -Path $File
+    }
+    Else {
+        Write-Warning 'Microsoft Teams not available, skipping'
     }
 
 }

@@ -1,5 +1,4 @@
 # General
 .vscode
 *.DS_Store
-*-AzureAD-*.xml
-*-ExchangeOnline-*.xml
+*.xml
