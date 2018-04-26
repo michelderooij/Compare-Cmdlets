@@ -28,8 +28,9 @@
     as parameters. This mode is used when specifying ReferenceCmds/DifferenceCmds.
 
     The export files are stored in the current folder and follow this naming convention:
-    - <YYYYMMDDHHMM>-ExchangeOnline-<Exchange Online build>.xml
-    - <YYYYMMDDHHMM>-AzureAD-<Azure Active Directory Module version>.xml
+    - ExchangeOnline-<Exchange Online build>.xml
+    - AzureAD-<Azure Active Directory Module version>.xml
+    - MicrosoftTeams-<MicrosoftTeams Module version>.xml
 
     .LINK
     http://eightwone.com
@@ -194,7 +195,7 @@ Else {
 	}
         $Module = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
-        $Version = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Version
+        $Version = (Get-Module -FullyQualifiedName $Module -ListAvailable).Version
         $File = 'AzureAD-{0}.xml' -f $Version
         Write-Verbose ('Storing Azure AD cmdlets in {0}' -f $File)
         $Cmdlets | Export-CliXml -Path $File
@@ -207,7 +208,7 @@ Else {
 	$User = 'NA'
         $Module = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
-        $Version = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Version
+        $Version = (Get-Module -FullyQualifiedName $Module -ListAvailable).Version
         $File = 'MicrosoftTeams-{0}.xml' -f $Version
         Write-Verbose ('Storing Microsoft Teams cmdlets in {0}' -f $File)
         $Cmdlets | Export-CliXml -Path $File
