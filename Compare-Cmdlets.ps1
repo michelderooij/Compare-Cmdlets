@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.03, April 26th, 2018
+    Version 1.04, May 26th, 2018
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -45,6 +45,7 @@
     1.03    Added Microsoft Teams
             Removed timestamp from export files (version should do)
             Fixed version reporting when multiple versions are installed
+    1.04    Added MSOnline processing
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -205,6 +206,24 @@ Else {
         $File = 'AzureAD-{0}.xml' -f $Version
 	If( -not( Test-Path -Path $File)) {
         	Write-Output ('Storing Azure AD cmdlets in {0}' -f $File)
+        	$Cmdlets | Export-CliXml -Path $File
+	}
+	Else {
+		Write-Warning ('File {0} already exists' -f $File)
+	}
+    }
+    Else {
+        Write-Warning 'Azure AD cmdlets not available, skipping'
+    }
+
+    If ( Get-Command Get-MsolUser -ErrorAction SilentlyContinue) {
+	$User = 'NA'
+        $Module = (Get-Command Get-MsolUser -ErrorAction SilentlyContinue ).Source
+        $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
+        $Version = (Get-Command Get-MSolUser -ErrorAction SilentlyContinue ).Version
+        $File = 'MSOnline-{0}.xml' -f $Version
+	If( -not( Test-Path -Path $File)) {
+        	Write-Output ('Storing MSOnline cmdlets in {0}' -f $File)
         	$Cmdlets | Export-CliXml -Path $File
 	}
 	Else {
