@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.04, May 26th, 2018
+    Version 1.05, June 5th, 2018
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -46,6 +46,7 @@
             Removed timestamp from export files (version should do)
             Fixed version reporting when multiple versions are installed
     1.04    Added MSOnline processing
+    1.05    Added InformationAction and InformationVariable to the ignored common parameters
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -87,7 +88,7 @@ param(
 If ( -not $Export) {
     # Comparison mode
 
-    $SkipParams = @('Debug', 'ErrorAction', 'ErrorVariable', 'OutVariable', 'OutBuffer', 'Verbose', 'WarningAction', 'WarningVariable', 'AsJob', 'Confirm', 'PipelineVariable', 'WhatIf')
+    $SkipParams = @('Debug', 'ErrorAction', 'ErrorVariable', 'OutVariable', 'OutBuffer', 'Verbose', 'WarningAction', 'WarningVariable', 'AsJob', 'Confirm', 'PipelineVariable', 'WhatIf', 'InformationAction', 'InformationVariable')
 
     Write-Output ('Reading cmdlets from {0}' -f $ReferenceCmds)
     $Cmds1 = Import-CliXml -Path $ReferenceCmds | Select-Object Name, Parameters | Sort-Object Name
