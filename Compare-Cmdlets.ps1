@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.05, June 5th, 2018
+    Version 1.1, May 7th, 2020
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -47,6 +47,10 @@
             Fixed version reporting when multiple versions are installed
     1.04    Added MSOnline processing
     1.05    Added InformationAction and InformationVariable to the ignored common parameters
+    1.06    Added ExchangeOnlineManagement processing
+    1.1     Speed up comparison using parameter lookup tables and dropping parameter sorting
+            Replaced hard-coded list of common parameters with system provided list
+            Changed output to use writing to host and verbose 
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -88,23 +92,31 @@ param(
 If ( -not $Export) {
     # Comparison mode
 
-    $SkipParams = @('Debug', 'ErrorAction', 'ErrorVariable', 'OutVariable', 'OutBuffer', 'Verbose', 'WarningAction', 'WarningVariable', 'AsJob', 'Confirm', 'PipelineVariable', 'WhatIf', 'InformationAction', 'InformationVariable')
+    # Common parameters
+    $SkipParams = [System.Management.Automation.PSCmdlet]::CommonParameters + [System.Management.Automation.PSCmdlet]::OptionalCommonParameters
 
-    Write-Output ('Reading cmdlets from {0}' -f $ReferenceCmds)
+    Write-Host ('Reading cmdlets from {0}' -f $ReferenceCmds)
+    $Cmds1Table=@{}
     $Cmds1 = Import-CliXml -Path $ReferenceCmds | Select-Object Name, Parameters | Sort-Object Name
     If ( !$Cmds1) {
         Throw ('File {0} does not seem to contain any cmdlet information' -f $ReferenceCmds)
     }
-    Write-Output ('Reference set contains {0} cmdlets.' -f $Cmds1.Count)
+    Else {
+        $Cmds1 | % { $Cmds1Table[ $_.Name]= $_ }
+    }
+    Write-Verbose ('Reference set contains {0} cmdlets.' -f $Cmds1.Count)
 
-    Write-Output ('Reading cmdlets from {0}' -f $DifferenceCmds)
+    Write-Host ('Reading cmdlets from {0}' -f $DifferenceCmds)
+    $Cmds2Table=@{}
     $Cmds2 = Import-CliXml -Path $DifferenceCmds | Select-Object Name, Parameters | Sort-Object Name
     If ( !$Cmds2) {
         Throw ('File {0} does not seem to contain any cmdlet information' -f $DifferenceCmds)
     }
-    Write-Output ('Difference set contains {0} cmdlets.' -f $Cmds2.Count)
+    Else {
+        $Cmds2 | % { $Cmds2Table[ $_.Name]= $_ }
+    }
+    Write-Verbose ('Difference set contains {0} cmdlets.' -f $Cmds2.Count)
 
-    Write-Output 'Comparing cmdlet sets ..'
     $Diff = Compare-Object -ReferenceObject $Cmds1 -DifferenceObject $Cmds2 -Property Name -IncludeEqual -PassThru
     $Max = $Diff.Count
     $Num = 0
@@ -116,7 +128,7 @@ If ( -not $Export) {
                     'Change'     = 'New'
                     'Type'       = 'Cmdlet'
                     'Cmdlet'     = $Item.Name
-                    'Parameters' = ($Item.Parameters.GetEnumerator() | ForEach-Object { $_.Name} | Where-Object {$SkipParams -notcontains $_} | Sort-Object ) -join ','
+                    'Parameter'  = $null
                 }
                 $Obj
             }
@@ -125,16 +137,16 @@ If ( -not $Export) {
                     'Change'     = 'Removed'
                     'Type'       = 'Cmdlet'
                     'Cmdlet'     = $Item.Name
-                    'Parameters' = ''
+                    'Parameter'  = $null
                 }
                 $Obj
             }
             '==' {
-                # Check parameters
-                $Cmd1P = ($Cmds1 | Where-Object {$_.Name -eq $Item.Name}).Parameters.GetEnumerator() | ForEach-Object { $_.Name } | Where-Object {$SkipParams -notcontains $_} | Sort-Object
-                $Cmd2P = ($Cmds2 | Where-Object {$_.Name -eq $Item.Name}).Parameters.GetEnumerator() | ForEach-Object { $_.Name } | Where-Object {$SkipParams -notcontains $_} | Sort-Object
+                # Equal cmdlet, check parameters
+                $Cmd1P = $Cmds1Table[ $Item.Name].Parameters.GetEnumerator() | Where-Object {$SkipParams -notcontains $_.Name}
+                $Cmd2P = $Cmds2Table[ $Item.Name].Parameters.GetEnumerator() | Where-Object {$SkipParams -notcontains $_.Name}
                 If ( [string]::IsNullOrEmpty($Cmd1P) -and [string]::IsNullOrEmpty( $Cmd2p)) {
-                    # NOP
+                    # No parameters to check
                 }
                 Else {
                     $ParamDiff = Compare-Object -ReferenceObject $Cmd1P -DifferenceObject $Cmd2P -ErrorAction SilentlyContinue
@@ -145,7 +157,7 @@ If ( -not $Export) {
                                     'Change'    = 'New'
                                     'Type'      = 'Parameter'
                                     'Cmdlet'    = $Item.Name
-                                    'Parameter' = ('{0}' -f $Param.InputObject)
+                                    'Parameter' = ('{0}' -f $Param.InputObject.Name)
                                 }
                                 $Obj
                             }
@@ -154,15 +166,14 @@ If ( -not $Export) {
                                     'Change'    = 'Removed'
                                     'Type'      = 'Parameter'
                                     'Cmdlet'    = $Item.Name
-                                    'Parameter' = ('{0}' -f $Param.InputObject)
+                                    'Parameter' = ('{0}' -f $Param.InputObject.Name)
                                 }
                                 $Obj
                             }
                             '==' {
-                                # NOP
+                                # Equal
                             }
                         }
-
                     }
                 }
             }
@@ -251,6 +262,24 @@ Else {
     }
     Else {
         Write-Warning 'Microsoft Teams not available, skipping'
+    }
+
+    If ( Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue) {
+	$User = 'NA'
+        $Module = (Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue ).Source
+        $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
+        $Version = (Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue ).Version
+        $File = 'ExchangeOnlineManagement-{0}.xml' -f $Version
+	If( -not( Test-Path -Path $File)) {
+        	Write-Output ('Storing Exchange Online Management cmdlets in {0}' -f $File)
+        	$Cmdlets | Export-CliXml -Path $File
+	}
+	Else {
+		Write-Warning ('File {0} already exists' -f $File)
+	}
+    }
+    Else {
+        Write-Warning 'ExchangeOnlineManagement not available, skipping'
     }
 
 }
