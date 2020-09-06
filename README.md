@@ -9,6 +9,7 @@ versions of those modules, such as new or removed cmdlets, changes in parameters
 this, first export currently available cmdlet and parameter sets to XML files. Then use the script
 to compare two sets of XML files, and it will report on differences, for example:
 
+<pre>
 ❯ .\Compare-Cmdlets.ps1 -ReferenceCmds .\MicrosoftTeams-1.1.4.xml -DifferenceCmds .\MicrosoftTeams-1.1.5.xml
 Reading cmdlets from .\MicrosoftTeams-1.1.4.xml
 Reading cmdlets from .\MicrosoftTeams-1.1.5.xml
@@ -39,6 +40,7 @@ New     Remove-TeamTargetingHierarchy        Cmdlet
 New     Set-CsGroupPolicyAssignment          Cmdlet
 New     Set-TeamTargetingHierarchy           Cmdlet
 New     Update-TeamsAppInstallation          Cmdlet
+</pre>
 
 ### Prerequisites
 
