@@ -29,8 +29,10 @@
 
     The export files are stored in the current folder and follow this naming convention:
     - ExchangeOnline-<Exchange Online build>.xml
+    - ExchangeOnlineManagement-<Exchange Online build>.xml
     - AzureAD-<Azure Active Directory Module version>.xml
     - MicrosoftTeams-<MicrosoftTeams Module version>.xml
+    - MSOnline-<MSOnline Module version>.xml
 
     .LINK
     http://eightwone.com
@@ -50,7 +52,8 @@
     1.06    Added ExchangeOnlineManagement processing
     1.1     Speed up comparison using parameter lookup tables and dropping parameter sorting
             Replaced hard-coded list of common parameters with system provided list
-            Changed output to use writing to host and verbose 
+            Changed output to use writing to host and verbose
+    1.11    Updated module information in description
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -186,7 +189,6 @@ If ( -not $Export) {
 Else {
 
     If ( Get-Command Get-Mailbox -ErrorAction SilentlyContinue) {
-        $User = ((Get-PsSession | Where-Object {$_.ConfigurationName -eq 'Microsoft.Exchange' -and $_.State -eq 'Opened' -and $_.Availability -eq 'Available'} | Sort-Object Id -Descending) | Select-Object -First 1).Runspace.ConnectionInfo.Credential.UserName
         $Module = (Get-Command Get-Mailbox -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-Mailbox -ErrorAction SilentlyContinue ).Version
@@ -206,12 +208,6 @@ Else {
     }
 
     If ( Get-Command Get-AzureADUser -ErrorAction SilentlyContinue) {
-	Try {
-        	$User = (Get-AzureADCurrentSessionInfo -ErrorAction SilentlyContinue).Account
-	}
-	Catch {
-		$User = 'Disconnected'
-	}
         $Module = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Version
@@ -229,7 +225,6 @@ Else {
     }
 
     If ( Get-Command Get-MsolUser -ErrorAction SilentlyContinue) {
-	$User = 'NA'
         $Module = (Get-Command Get-MsolUser -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-MSolUser -ErrorAction SilentlyContinue ).Version
@@ -247,7 +242,6 @@ Else {
     }
 
     If ( Get-Command Get-Team -ErrorAction SilentlyContinue) {
-	$User = 'NA'
         $Module = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Version
@@ -265,7 +259,6 @@ Else {
     }
 
     If ( Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue) {
-	$User = 'NA'
         $Module = (Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue ).Version
