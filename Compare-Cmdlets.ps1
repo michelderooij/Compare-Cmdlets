@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.1, May 7th, 2020
+    Version 1.11, September 6th, 2020
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -54,6 +54,7 @@
             Replaced hard-coded list of common parameters with system provided list
             Changed output to use writing to host and verbose
     1.11    Updated module information in description
+            Added DataFolder parameter
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -63,6 +64,9 @@
 
     .PARAMETER Export
     Specifies to export cmdlet information.
+
+    .PARAMETER DataFolder
+    Folder to store XML files in.
 
     .EXAMPLE
     Export information on the currently available Exchange Online and Azure AD cmdlets
@@ -89,7 +93,12 @@ param(
 
     [Parameter(Mandatory = $true, Position = 1, ParameterSetName = 'Export')]
     [Switch]
-    $Export
+    $Export,
+
+    [Parameter(Mandatory = $false, Position = 2, ParameterSetName = 'Export')]
+    [ValidateScript( {Test-Path $_ -PathType 'Leaf'})]
+    [String]
+    $DataFolder= 'Data'
 )
 
 If ( -not $Export) {
@@ -188,13 +197,17 @@ If ( -not $Export) {
 }
 Else {
 
+    If(-not( Test-Path $DataFolder)) {
+        mkdir $DataFolder
+    }
+
     If ( Get-Command Get-Mailbox -ErrorAction SilentlyContinue) {
         $Module = (Get-Command Get-Mailbox -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-Mailbox -ErrorAction SilentlyContinue ).Version
         $null = [string]((Get-OrganizationConfig).AdminDisplayVersion) -match '^.*\((?<build>[\d\.]+)\)$'
         $Build = $matches.build
-        $File = 'ExchangeOnline-{0}.xml' -f $Build
+        $File = Join-Path $DataFolder ('ExchangeOnline-{0}.xml' -f $Build)
 	If( -not( Test-Path -Path $File)) {
         	Write-Output ('Storing Exchange Online cmdlets in {0}' -f $File)
 	        $Cmdlets | Export-CliXml -Path $File
@@ -211,7 +224,7 @@ Else {
         $Module = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Version
-        $File = 'AzureAD-{0}.xml' -f $Version
+        $File = Join-Path $DataFolder ('AzureAD-{0}.xml' -f $Version)
 	If( -not( Test-Path -Path $File)) {
         	Write-Output ('Storing Azure AD cmdlets in {0}' -f $File)
         	$Cmdlets | Export-CliXml -Path $File
@@ -228,7 +241,7 @@ Else {
         $Module = (Get-Command Get-MsolUser -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-MSolUser -ErrorAction SilentlyContinue ).Version
-        $File = 'MSOnline-{0}.xml' -f $Version
+        $File = Join-Path $DataFolder ('MSOnline-{0}.xml' -f $Version)
 	If( -not( Test-Path -Path $File)) {
         	Write-Output ('Storing MSOnline cmdlets in {0}' -f $File)
         	$Cmdlets | Export-CliXml -Path $File
@@ -245,7 +258,7 @@ Else {
         $Module = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Version
-        $File = 'MicrosoftTeams-{0}.xml' -f $Version
+        $File = Join-Path $DataFolder ('MicrosoftTeams-{0}.xml' -f $Version)
 	If( -not( Test-Path -Path $File)) {
         	Write-Output ('Storing Microsoft Teams cmdlets in {0}' -f $File)
         	$Cmdlets | Export-CliXml -Path $File
@@ -262,7 +275,7 @@ Else {
         $Module = (Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
         $Version = (Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue ).Version
-        $File = 'ExchangeOnlineManagement-{0}.xml' -f $Version
+        $File = Join-Path $DataFolder ('ExchangeOnlineManagement-{0}.xml' -f $Version)
 	If( -not( Test-Path -Path $File)) {
         	Write-Output ('Storing Exchange Online Management cmdlets in {0}' -f $File)
         	$Cmdlets | Export-CliXml -Path $File
