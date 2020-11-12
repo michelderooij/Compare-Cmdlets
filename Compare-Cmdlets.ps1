@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.11, September 6th, 2020
+    Version 1.12, November 12th, 2020
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -55,6 +55,7 @@
             Changed output to use writing to host and verbose
     1.11    Updated module information in description
             Added DataFolder parameter
+    1.12    Fixed DataFolder path checking
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -96,9 +97,9 @@ param(
     $Export,
 
     [Parameter(Mandatory = $false, Position = 2, ParameterSetName = 'Export')]
-    [ValidateScript( {Test-Path $_ -PathType 'Leaf'})]
+    [ValidateScript( {Test-Path $_ -PathType 'Container'})]
     [String]
-    $DataFolder= 'Data'
+    $DataFolder= '.\Data\'
 )
 
 If ( -not $Export) {
