@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.12, November 12th, 2020
+    Version 1.13, June 28th, 2022
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -56,6 +56,7 @@
     1.11    Updated module information in description
             Added DataFolder parameter
     1.12    Fixed DataFolder path checking
+    1.13    Added MSCommerce
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -287,6 +288,23 @@ Else {
     }
     Else {
         Write-Warning 'ExchangeOnlineManagement not available, skipping'
+    }
+
+    If ( Get-Command Connect-MSCommerce -ErrorAction SilentlyContinue) {
+        $Module = (Get-Command Connect-MSCommerce -ErrorAction SilentlyContinue ).Source
+        $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
+        $Version = (Get-Command Connect-MSCommerce -ErrorAction SilentlyContinue ).Version
+        $File = Join-Path $DataFolder ('MSCommerce-{0}.xml' -f $Version)
+	If( -not( Test-Path -Path $File)) {
+        	Write-Output ('Storing MSCommerce cmdlets in {0}' -f $File)
+        	$Cmdlets | Export-CliXml -Path $File
+	}
+	Else {
+		Write-Warning ('File {0} already exists' -f $File)
+	}
+    }
+    Else {
+        Write-Warning 'MSCommerce not available, skipping'
     }
 
 }
