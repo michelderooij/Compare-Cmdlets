@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.13, June 28th, 2022
+    Version 1.14, July 20th, 2022
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -57,6 +57,7 @@
             Added DataFolder parameter
     1.12    Fixed DataFolder path checking
     1.13    Added MSCommerce
+    1.14    Added MSGraph
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -305,6 +306,25 @@ Else {
     }
     Else {
         Write-Warning 'MSCommerce not available, skipping'
+    }
+
+    # Connect-MgGraph -Scopes "User.ReadWrite.All, UserAuthenticationMethod.ReadWrite.All, Directory.ReadWrite.All"
+    If ( Get-Command Get-MgUser -ErrorAction SilentlyContinue) {
+        $Modules= Get-Module -Name Microsoft.Graph* -ListAvailable
+        If( $Modules) {
+            $Version = (Get-Command -Name Get-MgUser).Version
+            $File = Join-Path $DataFolder ('MsGraph-{0}.xml' -f $Version)
+            If( -not( Test-Path -Path $File)) {
+                Write-Output ('Storing MsGraph cmdlets in {0}' -f $File)
+                $Modules | ForEach-Object { Get-Command -Module $_.Name } | Select-Object Name, Parameters | Export-CliXml -Path $File
+            }
+            Else {
+		Write-Warning ('File {0} already exists' -f $File)
+            }
+        }
+    }
+    Else {
+        Write-Warning 'MSGraph not available, skipping'
     }
 
 }
