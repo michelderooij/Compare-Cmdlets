@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.14, July 20th, 2022
+    Version 1.15, September 14th, 2022
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -58,6 +58,7 @@
     1.12    Fixed DataFolder path checking
     1.13    Added MSCommerce
     1.14    Added MSGraph
+    1.15    Added code to export EXO Preview info with Preview tags
 
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
@@ -103,6 +104,29 @@ param(
     [String]
     $DataFolder= '.\Data\'
 )
+
+function Get-myModuleVersionInfo {
+    param( 
+        $Module
+    )
+    $ModuleVersion = $Module.Version.ToString()
+
+    # See if we need to add preview tags
+    $exoModuleRoot = (Get-Item $Module.Path).Directory.Parent.FullName
+    $exoModuleManifestPath = Join-Path -Path $exoModuleRoot -ChildPath ('{0}.psd1' -f $Module.Name)
+    $isExoModuleManifestPathValid = Test-Path -Path $exoModuleManifestPath
+    if( $isExoModuleManifestPathValid) {
+        $exoModuleManifestContent = Get-Content -Path $exoModuleManifestPath
+        $preReleaseInfo = $exoModuleManifestContent -match "Prerelease = '(.*)'"
+        if( $preReleaseInfo) {
+            $ModuleVersion = '{0}-{1}' -f $Module.Version.ToString(),$preReleaseInfo[0].Split('=')[1].Trim().Trim("'")
+        }
+    }
+    Else {
+        # Could be a local debug build import for testing. Skip extracting prerelease info for those.
+    }
+    $ModuleVersion
+}
 
 If ( -not $Export) {
     # Comparison mode
@@ -277,9 +301,9 @@ Else {
     If ( Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue) {
         $Module = (Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
-        $Version = (Get-Command Get-EXOMailbox -ErrorAction SilentlyContinue ).Version
+        $Version= Get-myModuleVersionInfo -Module (Get-Module -Name $Module)
         $File = Join-Path $DataFolder ('ExchangeOnlineManagement-{0}.xml' -f $Version)
-	If( -not( Test-Path -Path $File)) {
+	 If( -not( Test-Path -Path $File)) {
         	Write-Output ('Storing Exchange Online Management cmdlets in {0}' -f $File)
         	$Cmdlets | Export-CliXml -Path $File
 	}
@@ -310,12 +334,12 @@ Else {
 
     # Connect-MgGraph -Scopes "User.ReadWrite.All, UserAuthenticationMethod.ReadWrite.All, Directory.ReadWrite.All"
     If ( Get-Command Get-MgUser -ErrorAction SilentlyContinue) {
-        $Modules= Get-Module -Name Microsoft.Graph* -ListAvailable
+        $Modules= Get-Module -Name Microsoft.Graph.User -ListAvailable
         If( $Modules) {
             $Version = (Get-Command -Name Get-MgUser).Version
-            $File = Join-Path $DataFolder ('MsGraph-{0}.xml' -f $Version)
+            $File = Join-Path $DataFolder ('MsGraph.User-{0}.xml' -f $Version)
             If( -not( Test-Path -Path $File)) {
-                Write-Output ('Storing MsGraph cmdlets in {0}' -f $File)
+                Write-Output ('Storing MsGraph.User cmdlets in {0}' -f $File)
                 $Modules | ForEach-Object { Get-Command -Module $_.Name } | Select-Object Name, Parameters | Export-CliXml -Path $File
             }
             Else {
