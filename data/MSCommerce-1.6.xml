@@ -1,0 +1,3451 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Selected.System.Management.Automation.FunctionInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Connect-MSCommerce</S>
+      <Obj N="Parameters" RefId="1">
+        <TN RefId="1">
+          <T>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Management.Automation.ParameterMetadata, System.Management.Automation, Version=7.3.6.500, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">ClientId</S>
+            <Obj N="Value" RefId="2">
+              <TN RefId="2">
+                <T>System.Management.Automation.ParameterMetadata</T>
+                <T>System.Object</T>
+              </TN>
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ClientId</S>
+                <Obj N="ParameterType" RefId="3">
+                  <TN RefId="3">
+                    <T>System.RuntimeType</T>
+                    <T>System.Reflection.TypeInfo</T>
+                    <T>System.Type</T>
+                    <T>System.Reflection.MemberInfo</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <ToString>System.String</ToString>
+                  <Props>
+                    <B N="IsCollectible">false</B>
+                    <S N="FullName">System.String</S>
+                    <S N="AssemblyQualifiedName">System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e</S>
+                    <S N="Namespace">System</S>
+                    <G N="GUID">67bb7feb-70e1-32d3-8cdb-a2911af33394</G>
+                    <B N="IsEnum">false</B>
+                    <B N="IsSZArray">false</B>
+                    <B N="ContainsGenericParameters">false</B>
+                    <S N="StructLayoutAttribute">System.Runtime.InteropServices.StructLayoutAttribute</S>
+                    <S N="Name">String</S>
+                    <Nil N="DeclaringType" />
+                    <S N="Assembly">System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e</S>
+                    <Obj N="BaseType" RefId="4">
+                      <S>System.Object</S>
+                    </Obj>
+                    <B N="IsByRefLike">false</B>
+                    <B N="IsConstructedGenericType">false</B>
+                    <B N="IsGenericType">false</B>
+                    <B N="IsGenericTypeDefinition">false</B>
+                    <B N="IsGenericParameter">false</B>
+                    <B N="IsTypeDefinition">true</B>
+                    <B N="IsSecurityCritical">true</B>
+                    <B N="IsSecuritySafeCritical">false</B>
+                    <B N="IsSecurityTransparent">false</B>
+                    <S N="MemberType">TypeInfo</S>
+                    <I32 N="MetadataToken">33554612</I32>
+                    <S N="Module">System.Private.CoreLib.dll</S>
+                    <Nil N="ReflectedType" />
+                    <S N="TypeHandle">System.RuntimeTypeHandle</S>
+                    <Ref N="UnderlyingSystemType" RefId="3" />
+                    <Obj N="GenericTypeParameters" RefId="5">
+                      <TN RefId="4">
+                        <T>System.Type[]</T>
+                        <T>System.Array</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST />
+                    </Obj>
+                    <Obj N="DeclaredConstructors" RefId="6">
+                      <TN RefId="5">
+                        <T>System.Reflection.ConstructorInfo[]</T>
+                        <T>System.Array</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST>
+                        <S>Void .ctor(Char[])</S>
+                        <S>Void .ctor(Char[], Int32, Int32)</S>
+                        <S>Void .ctor(Char*)</S>
+                        <S>Void .ctor(Char*, Int32, Int32)</S>
+                        <S>Void .ctor(SByte*)</S>
+                        <S>Void .ctor(SByte*, Int32, Int32)</S>
+                        <S>Void .ctor(SByte*, Int32, Int32, System.Text.Encoding)</S>
+                        <S>Void .ctor(Char, Int32)</S>
+                        <S>Void .ctor(System.ReadOnlySpan`1[System.Char])</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredEvents" RefId="7">
+                      <TN RefId="6">
+                        <T>System.Reflection.EventInfo[]</T>
+                        <T>System.Array</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST />
+                    </Obj>
+                    <Obj N="DeclaredFields" RefId="8">
+                      <TN RefId="7">
+                        <T>System.Reflection.FieldInfo[]</T>
+                        <T>System.Array</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST>
+                        <S>Int32 _stringLength</S>
+                        <S>Char _firstChar</S>
+                        <S>System.String Empty</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMembers" RefId="9">
+                      <TN RefId="8">
+                        <T>System.Reflection.MemberInfo[]</T>
+                        <T>System.Array</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST>
+                        <S>System.String FastAllocateString(Int32)</S>
+                        <S>Void SetTrailByte(Byte)</S>
+                        <S>Boolean TryGetTrailByte(Byte ByRef)</S>
+                        <S>System.String Intern()</S>
+                        <S>System.String IsInterned()</S>
+                        <S>System.String Intern(System.String)</S>
+                        <S>System.String IsInterned(System.String)</S>
+                        <S>Void InternalCopy(System.String, IntPtr, Int32)</S>
+                        <S>Int32 GetBytesFromEncoding(Byte*, Int32, System.Text.Encoding)</S>
+                        <S>Boolean EqualsHelper(System.String, System.String)</S>
+                        <S>Int32 CompareOrdinalHelper(System.String, Int32, Int32, System.String, Int32, Int32)</S>
+                        <S>Boolean EqualsOrdinalIgnoreCase(System.String, System.String)</S>
+                        <S>Boolean EqualsOrdinalIgnoreCaseNoLengthCheck(System.String, System.String)</S>
+                        <S>Int32 CompareOrdinalHelper(System.String, System.String)</S>
+                        <S>Int32 Compare(System.String, System.String)</S>
+                        <S>Int32 Compare(System.String, System.String, Boolean)</S>
+                        <S>Int32 Compare(System.String, System.String, System.StringComparison)</S>
+                        <S>Int32 Compare(System.String, System.String, System.Globalization.CultureInfo, System.Globalization.CompareOptions)</S>
+                        <S>Int32 Compare(System.String, System.String, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32, Boolean)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32, System.Globalization.CultureInfo, System.Globalization.CompareOptions)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32, System.StringComparison)</S>
+                        <S>Int32 CompareOrdinal(System.String, System.String)</S>
+                        <S>Int32 CompareOrdinal(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char])</S>
+                        <S>Int32 CompareOrdinal(System.String, Int32, System.String, Int32, Int32)</S>
+                        <S>Int32 CompareTo(System.Object)</S>
+                        <S>Int32 CompareTo(System.String)</S>
+                        <S>Boolean EndsWith(System.String)</S>
+                        <S>Boolean EndsWith(System.String, System.StringComparison)</S>
+                        <S>Boolean EndsWith(System.String, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>Boolean EndsWith(Char)</S>
+                        <S>Boolean Equals(System.Object)</S>
+                        <S>Boolean Equals(System.String)</S>
+                        <S>Boolean Equals(System.String, System.StringComparison)</S>
+                        <S>Boolean Equals(System.String, System.String)</S>
+                        <S>Boolean Equals(System.String, System.String, System.StringComparison)</S>
+                        <S>Boolean op_Equality(System.String, System.String)</S>
+                        <S>Boolean op_Inequality(System.String, System.String)</S>
+                        <S>Int32 GetHashCode()</S>
+                        <S>Int32 GetHashCode(System.StringComparison)</S>
+                        <S>Int32 GetHashCodeOrdinalIgnoreCase()</S>
+                        <S>Int32 GetHashCode(System.ReadOnlySpan`1[System.Char])</S>
+                        <S>Int32 GetHashCode(System.ReadOnlySpan`1[System.Char], System.StringComparison)</S>
+                        <S>Int32 GetHashCodeOrdinalIgnoreCase(System.ReadOnlySpan`1[System.Char])</S>
+                        <S>Int32 GetNonRandomizedHashCode()</S>
+                        <S>Int32 GetNonRandomizedHashCodeOrdinalIgnoreCase()</S>
+                        <S>Boolean StartsWith(System.String)</S>
+                        <S>Boolean StartsWith(System.String, System.StringComparison)</S>
+                        <S>Boolean StartsWith(System.String, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>Boolean StartsWith(Char)</S>
+                        <S>Void CheckStringComparison(System.StringComparison)</S>
+                        <S>System.Globalization.CompareOptions GetCaseCompareOfComparisonCulture(System.StringComparison)</S>
+                        <S>System.Globalization.CompareOptions GetCompareOptionsFromOrdinalStringComparison(System.StringComparison)</S>
+                        <S>System.String Ctor(Char[])</S>
+                        <S>System.String Ctor(Char[], Int32, Int32)</S>
+                        <S>System.String Ctor(Char*)</S>
+                        <S>System.String Ctor(Char*, Int32, Int32)</S>
+                        <S>System.String Ctor(SByte*)</S>
+                        <S>System.String Ctor(SByte*, Int32, Int32)</S>
+                        <S>System.String CreateStringForSByteConstructor(Byte*, Int32)</S>
+                        <S>System.String Ctor(SByte*, Int32, Int32, System.Text.Encoding)</S>
+                        <S>System.String Ctor(Char, Int32)</S>
+                        <S>System.String Ctor(System.ReadOnlySpan`1[System.Char])</S>
+                        <S>System.String Create[TState](Int32, TState, System.Buffers.SpanAction`2[System.Char,TState])</S>
+                        <S>System.String Create(System.IFormatProvider, System.Runtime.CompilerServices.DefaultInterpolatedStringHandler ByRef)</S>
+                        <S>System.String Create(System.IFormatProvider, System.Span`1[System.Char], System.Runtime.CompilerServices.DefaultInterpolatedStringHandler ByRef)</S>
+                        <S>System.ReadOnlySpan`1[System.Char] op_Implicit(System.String)</S>
+                        <S>Boolean TryGetSpan(Int32, Int32, System.ReadOnlySpan`1[System.Char] ByRef)</S>
+                        <S>System.Object Clone()</S>
+                        <S>System.String Copy(System.String)</S>
+                        <S>Void CopyTo(Int32, Char[], Int32, Int32)</S>
+                        <S>Void CopyTo(System.Span`1[System.Char])</S>
+                        <S>Boolean TryCopyTo(System.Span`1[System.Char])</S>
+                        <S>Char[] ToCharArray()</S>
+                        <S>Char[] ToCharArray(Int32, Int32)</S>
+                        <S>Boolean IsNullOrEmpty(System.String)</S>
+                        <S>Boolean IsNullOrWhiteSpace(System.String)</S>
+                        <S>Char&amp; GetPinnableReference()</S>
+                        <S>Char&amp; GetRawStringData()</S>
+                        <S>UInt16&amp; GetRawStringDataAsUInt16()</S>
+                        <S>System.String CreateStringFromEncoding(Byte*, Int32, System.Text.Encoding)</S>
+                        <S>System.String CreateFromChar(Char)</S>
+                        <S>System.String CreateFromChar(Char, Char)</S>
+                        <S>System.String ToString()</S>
+                        <S>System.String ToString(System.IFormatProvider)</S>
+                        <S>System.CharEnumerator GetEnumerator()</S>
+                        <S>System.Collections.Generic.IEnumerator`1[System.Char] System.Collections.Generic.IEnumerable&lt;System.Char&gt;.GetEnumerator()</S>
+                        <S>System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()</S>
+                        <S>System.Text.StringRuneEnumerator EnumerateRunes()</S>
+                        <S>Int32 wcslen(Char*)</S>
+                        <S>Int32 strlen(Byte*)</S>
+                        <S>System.TypeCode GetTypeCode()</S>
+                        <S>Boolean System.IConvertible.ToBoolean(System.IFormatProvider)</S>
+                        <S>Char System.IConvertible.ToChar(System.IFormatProvider)</S>
+                        <S>SByte System.IConvertible.ToSByte(System.IFormatProvider)</S>
+                        <S>Byte System.IConvertible.ToByte(System.IFormatProvider)</S>
+                        <S>Int16 System.IConvertible.ToInt16(System.IFormatProvider)</S>
+                        <S>UInt16 System.IConvertible.ToUInt16(System.IFormatProvider)</S>
+                        <S>Int32 System.IConvertible.ToInt32(System.IFormatProvider)</S>
+                        <S>UInt32 System.IConvertible.ToUInt32(System.IFormatProvider)</S>
+                        <S>Int64 System.IConvertible.ToInt64(System.IFormatProvider)</S>
+                        <S>UInt64 System.IConvertible.ToUInt64(System.IFormatProvider)</S>
+                        <S>Single System.IConvertible.ToSingle(System.IFormatProvider)</S>
+                        <S>Double System.IConvertible.ToDouble(System.IFormatProvider)</S>
+                        <S>System.Decimal System.IConvertible.ToDecimal(System.IFormatProvider)</S>
+                        <S>System.DateTime System.IConvertible.ToDateTime(System.IFormatProvider)</S>
+                        <S>System.Object System.IConvertible.ToType(System.Type, System.IFormatProvider)</S>
+                        <S>Boolean IsNormalized()</S>
+                        <S>Boolean IsNormalized(System.Text.NormalizationForm)</S>
+                        <S>System.String Normalize()</S>
+                        <S>System.String Normalize(System.Text.NormalizationForm)</S>
+                        <S>Boolean IsAscii()</S>
+                        <S>Char get_Chars(Int32)</S>
+                        <S>Int32 get_Length()</S>
+                        <S>Void FillStringChecked(System.String, Int32, System.String)</S>
+                        <S>System.String Concat(System.Object)</S>
+                        <S>System.String Concat(System.Object, System.Object)</S>
+                        <S>System.String Concat(System.Object, System.Object, System.Object)</S>
+                        <S>System.String Concat(System.Object[])</S>
+                        <S>System.String Concat[T](System.Collections.Generic.IEnumerable`1[T])</S>
+                        <S>System.String Concat(System.Collections.Generic.IEnumerable`1[System.String])</S>
+                        <S>System.String Concat(System.String, System.String)</S>
+                        <S>System.String Concat(System.String, System.String, System.String)</S>
+                        <S>System.String Concat(System.String, System.String, System.String, System.String)</S>
+                        <S>System.String Concat(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char])</S>
+                        <S>System.String Concat(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char])</S>
+                        <S>System.String Concat(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char])</S>
+                        <S>System.String Concat(System.String[])</S>
+                        <S>System.String Format(System.String, System.Object)</S>
+                        <S>System.String Format(System.String, System.Object, System.Object)</S>
+                        <S>System.String Format(System.String, System.Object, System.Object, System.Object)</S>
+                        <S>System.String Format(System.String, System.Object[])</S>
+                        <S>System.String Format(System.IFormatProvider, System.String, System.Object)</S>
+                        <S>System.String Format(System.IFormatProvider, System.String, System.Object, System.Object)</S>
+                        <S>System.String Format(System.IFormatProvider, System.String, System.Object, System.Object, System.Object)</S>
+                        <S>System.String Format(System.IFormatProvider, System.String, System.Object[])</S>
+                        <S>System.String FormatHelper(System.IFormatProvider, System.String, System.ReadOnlySpan`1[System.Object])</S>
+                        <S>System.String Insert(Int32, System.String)</S>
+                        <S>System.String Join(Char, System.String[])</S>
+                        <S>System.String Join(System.String, System.String[])</S>
+                        <S>System.String Join(Char, System.String[], Int32, Int32)</S>
+                        <S>System.String Join(System.String, System.String[], Int32, Int32)</S>
+                        <S>System.String JoinCore(System.ReadOnlySpan`1[System.Char], System.String[], Int32, Int32)</S>
+                        <S>System.String Join(System.String, System.Collections.Generic.IEnumerable`1[System.String])</S>
+                        <S>System.String Join(Char, System.Object[])</S>
+                        <S>System.String Join(System.String, System.Object[])</S>
+                        <S>System.String JoinCore(System.ReadOnlySpan`1[System.Char], System.Object[])</S>
+                        <S>System.String Join[T](Char, System.Collections.Generic.IEnumerable`1[T])</S>
+                        <S>System.String Join[T](System.String, System.Collections.Generic.IEnumerable`1[T])</S>
+                        <S>System.String JoinCore[T](System.ReadOnlySpan`1[System.Char], System.Collections.Generic.IEnumerable`1[T])</S>
+                        <S>System.String JoinCore(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.String])</S>
+                        <S>System.String PadLeft(Int32)</S>
+                        <S>System.String PadLeft(Int32, Char)</S>
+                        <S>System.String PadRight(Int32)</S>
+                        <S>System.String PadRight(Int32, Char)</S>
+                        <S>System.String Remove(Int32, Int32)</S>
+                        <S>System.String Remove(Int32)</S>
+                        <S>System.String Replace(System.String, System.String, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>System.String Replace(System.String, System.String, System.StringComparison)</S>
+                        <S>System.String ReplaceCore(System.String, System.String, System.Globalization.CompareInfo, System.Globalization.CompareOptions)</S>
+                        <S>System.String ReplaceCore(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.Globalization.CompareInfo, System.Globalization.CompareOptions)</S>
+                        <S>System.String Replace(Char, Char)</S>
+                        <S>System.String Replace(System.String, System.String)</S>
+                        <S>System.String ReplaceHelper(Int32, System.String, System.ReadOnlySpan`1[System.Int32])</S>
+                        <S>System.String ReplaceLineEndings()</S>
+                        <S>System.String ReplaceLineEndings(System.String)</S>
+                        <S>Int32 IndexOfNewlineChar(System.ReadOnlySpan`1[System.Char], Int32 ByRef)</S>
+                        <S>System.String[] Split(Char, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(Char, Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(Char[])</S>
+                        <S>System.String[] Split(Char[], Int32)</S>
+                        <S>System.String[] Split(Char[], System.StringSplitOptions)</S>
+                        <S>System.String[] Split(Char[], Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] SplitInternal(System.ReadOnlySpan`1[System.Char], Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(System.String, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(System.String, Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(System.String[], System.StringSplitOptions)</S>
+                        <S>System.String[] Split(System.String[], Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] SplitInternal(System.String, System.String[], Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] CreateSplitArrayOfThisAsSoleValue(System.StringSplitOptions, Int32)</S>
+                        <S>System.String[] SplitInternal(System.String, Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] SplitWithoutPostProcessing(System.ReadOnlySpan`1[System.Int32], System.ReadOnlySpan`1[System.Int32], Int32, Int32)</S>
+                        <S>System.String[] SplitWithPostProcessing(System.ReadOnlySpan`1[System.Int32], System.ReadOnlySpan`1[System.Int32], Int32, Int32, System.StringSplitOptions)</S>
+                        <S>Void MakeSeparatorList(System.ReadOnlySpan`1[System.Char], System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef)</S>
+                        <S>Void MakeSeparatorListVectorized(System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef, Char, Char, Char)</S>
+                        <S>Void MakeSeparatorList(System.String, System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef)</S>
+                        <S>Void MakeSeparatorList(System.String[], System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef, System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef)</S>
+                        <S>Void CheckStringSplitOptions(System.StringSplitOptions)</S>
+                        <S>System.String Substring(Int32)</S>
+                        <S>System.String Substring(Int32, Int32)</S>
+                        <S>Void ThrowSubstringArgumentOutOfRange(Int32, Int32)</S>
+                        <S>System.String InternalSubString(Int32, Int32)</S>
+                        <S>System.String ToLower()</S>
+                        <S>System.String ToLower(System.Globalization.CultureInfo)</S>
+                        <S>System.String ToLowerInvariant()</S>
+                        <S>System.String ToUpper()</S>
+                        <S>System.String ToUpper(System.Globalization.CultureInfo)</S>
+                        <S>System.String ToUpperInvariant()</S>
+                        <S>System.String Trim()</S>
+                        <S>System.String Trim(Char)</S>
+                        <S>System.String Trim(Char[])</S>
+                        <S>System.String TrimStart()</S>
+                        <S>System.String TrimStart(Char)</S>
+                        <S>System.String TrimStart(Char[])</S>
+                        <S>System.String TrimEnd()</S>
+                        <S>System.String TrimEnd(Char)</S>
+                        <S>System.String TrimEnd(Char[])</S>
+                        <S>System.String TrimWhiteSpaceHelper(System.Text.TrimType)</S>
+                        <S>System.String TrimHelper(Char*, Int32, System.Text.TrimType)</S>
+                        <S>System.String CreateTrimmedString(Int32, Int32)</S>
+                        <S>Boolean Contains(System.String)</S>
+                        <S>Boolean Contains(System.String, System.StringComparison)</S>
+                        <S>Boolean Contains(Char)</S>
+                        <S>Boolean Contains(Char, System.StringComparison)</S>
+                        <S>Int32 IndexOf(Char)</S>
+                        <S>Int32 IndexOf(Char, Int32)</S>
+                        <S>Int32 IndexOf(Char, System.StringComparison)</S>
+                        <S>Int32 IndexOfCharOrdinalIgnoreCase(Char)</S>
+                        <S>Int32 IndexOf(Char, Int32, Int32)</S>
+                        <S>Int32 IndexOfAny(Char[])</S>
+                        <S>Int32 IndexOfAny(Char[], Int32)</S>
+                        <S>Int32 IndexOfAny(Char[], Int32, Int32)</S>
+                        <S>Int32 IndexOf(System.String)</S>
+                        <S>Int32 IndexOf(System.String, Int32)</S>
+                        <S>Int32 IndexOf(System.String, Int32, Int32)</S>
+                        <S>Int32 IndexOf(System.String, System.StringComparison)</S>
+                        <S>Int32 IndexOf(System.String, Int32, System.StringComparison)</S>
+                        <S>Int32 IndexOf(System.String, Int32, Int32, System.StringComparison)</S>
+                        <S>Int32 LastIndexOf(Char)</S>
+                        <S>Int32 LastIndexOf(Char, Int32)</S>
+                        <S>Int32 LastIndexOf(Char, Int32, Int32)</S>
+                        <S>Int32 LastIndexOfAny(Char[])</S>
+                        <S>Int32 LastIndexOfAny(Char[], Int32)</S>
+                        <S>Int32 LastIndexOfAny(Char[], Int32, Int32)</S>
+                        <S>Int32 LastIndexOf(System.String)</S>
+                        <S>Int32 LastIndexOf(System.String, Int32)</S>
+                        <S>Int32 LastIndexOf(System.String, Int32, Int32)</S>
+                        <S>Int32 LastIndexOf(System.String, System.StringComparison)</S>
+                        <S>Int32 LastIndexOf(System.String, Int32, System.StringComparison)</S>
+                        <S>Int32 LastIndexOf(System.String, Int32, Int32, System.StringComparison)</S>
+                        <S>Int32 &lt;GetNonRandomizedHashCodeOrdinalIgnoreCase&gt;g__GetNonRandomizedHashCodeOrdinalIgnoreCaseSlow|47_0(System.String)</S>
+                        <S>Void .ctor(Char[])</S>
+                        <S>Void .ctor(Char[], Int32, Int32)</S>
+                        <S>Void .ctor(Char*)</S>
+                        <S>Void .ctor(Char*, Int32, Int32)</S>
+                        <S>Void .ctor(SByte*)</S>
+                        <S>Void .ctor(SByte*, Int32, Int32)</S>
+                        <S>Void .ctor(SByte*, Int32, Int32, System.Text.Encoding)</S>
+                        <S>Void .ctor(Char, Int32)</S>
+                        <S>Void .ctor(System.ReadOnlySpan`1[System.Char])</S>
+                        <S>Char Chars [Int32]</S>
+                        <S>Int32 Length</S>
+                        <S>Int32 _stringLength</S>
+                        <S>Char _firstChar</S>
+                        <S>System.String Empty</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMethods" RefId="10">
+                      <TN RefId="9">
+                        <T>System.Reflection.MethodInfo[]</T>
+                        <T>System.Array</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST>
+                        <S>System.String FastAllocateString(Int32)</S>
+                        <S>Void SetTrailByte(Byte)</S>
+                        <S>Boolean TryGetTrailByte(Byte ByRef)</S>
+                        <S>System.String Intern()</S>
+                        <S>System.String IsInterned()</S>
+                        <S>System.String Intern(System.String)</S>
+                        <S>System.String IsInterned(System.String)</S>
+                        <S>Void InternalCopy(System.String, IntPtr, Int32)</S>
+                        <S>Int32 GetBytesFromEncoding(Byte*, Int32, System.Text.Encoding)</S>
+                        <S>Boolean EqualsHelper(System.String, System.String)</S>
+                        <S>Int32 CompareOrdinalHelper(System.String, Int32, Int32, System.String, Int32, Int32)</S>
+                        <S>Boolean EqualsOrdinalIgnoreCase(System.String, System.String)</S>
+                        <S>Boolean EqualsOrdinalIgnoreCaseNoLengthCheck(System.String, System.String)</S>
+                        <S>Int32 CompareOrdinalHelper(System.String, System.String)</S>
+                        <S>Int32 Compare(System.String, System.String)</S>
+                        <S>Int32 Compare(System.String, System.String, Boolean)</S>
+                        <S>Int32 Compare(System.String, System.String, System.StringComparison)</S>
+                        <S>Int32 Compare(System.String, System.String, System.Globalization.CultureInfo, System.Globalization.CompareOptions)</S>
+                        <S>Int32 Compare(System.String, System.String, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32, Boolean)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32, System.Globalization.CultureInfo, System.Globalization.CompareOptions)</S>
+                        <S>Int32 Compare(System.String, Int32, System.String, Int32, Int32, System.StringComparison)</S>
+                        <S>Int32 CompareOrdinal(System.String, System.String)</S>
+                        <S>Int32 CompareOrdinal(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char])</S>
+                        <S>Int32 CompareOrdinal(System.String, Int32, System.String, Int32, Int32)</S>
+                        <S>Int32 CompareTo(System.Object)</S>
+                        <S>Int32 CompareTo(System.String)</S>
+                        <S>Boolean EndsWith(System.String)</S>
+                        <S>Boolean EndsWith(System.String, System.StringComparison)</S>
+                        <S>Boolean EndsWith(System.String, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>Boolean EndsWith(Char)</S>
+                        <S>Boolean Equals(System.Object)</S>
+                        <S>Boolean Equals(System.String)</S>
+                        <S>Boolean Equals(System.String, System.StringComparison)</S>
+                        <S>Boolean Equals(System.String, System.String)</S>
+                        <S>Boolean Equals(System.String, System.String, System.StringComparison)</S>
+                        <S>Boolean op_Equality(System.String, System.String)</S>
+                        <S>Boolean op_Inequality(System.String, System.String)</S>
+                        <S>Int32 GetHashCode()</S>
+                        <S>Int32 GetHashCode(System.StringComparison)</S>
+                        <S>Int32 GetHashCodeOrdinalIgnoreCase()</S>
+                        <S>Int32 GetHashCode(System.ReadOnlySpan`1[System.Char])</S>
+                        <S>Int32 GetHashCode(System.ReadOnlySpan`1[System.Char], System.StringComparison)</S>
+                        <S>Int32 GetHashCodeOrdinalIgnoreCase(System.ReadOnlySpan`1[System.Char])</S>
+                        <S>Int32 GetNonRandomizedHashCode()</S>
+                        <S>Int32 GetNonRandomizedHashCodeOrdinalIgnoreCase()</S>
+                        <S>Boolean StartsWith(System.String)</S>
+                        <S>Boolean StartsWith(System.String, System.StringComparison)</S>
+                        <S>Boolean StartsWith(System.String, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>Boolean StartsWith(Char)</S>
+                        <S>Void CheckStringComparison(System.StringComparison)</S>
+                        <S>System.Globalization.CompareOptions GetCaseCompareOfComparisonCulture(System.StringComparison)</S>
+                        <S>System.Globalization.CompareOptions GetCompareOptionsFromOrdinalStringComparison(System.StringComparison)</S>
+                        <S>System.String Ctor(Char[])</S>
+                        <S>System.String Ctor(Char[], Int32, Int32)</S>
+                        <S>System.String Ctor(Char*)</S>
+                        <S>System.String Ctor(Char*, Int32, Int32)</S>
+                        <S>System.String Ctor(SByte*)</S>
+                        <S>System.String Ctor(SByte*, Int32, Int32)</S>
+                        <S>System.String CreateStringForSByteConstructor(Byte*, Int32)</S>
+                        <S>System.String Ctor(SByte*, Int32, Int32, System.Text.Encoding)</S>
+                        <S>System.String Ctor(Char, Int32)</S>
+                        <S>System.String Ctor(System.ReadOnlySpan`1[System.Char])</S>
+                        <S>System.String Create[TState](Int32, TState, System.Buffers.SpanAction`2[System.Char,TState])</S>
+                        <S>System.String Create(System.IFormatProvider, System.Runtime.CompilerServices.DefaultInterpolatedStringHandler ByRef)</S>
+                        <S>System.String Create(System.IFormatProvider, System.Span`1[System.Char], System.Runtime.CompilerServices.DefaultInterpolatedStringHandler ByRef)</S>
+                        <S>System.ReadOnlySpan`1[System.Char] op_Implicit(System.String)</S>
+                        <S>Boolean TryGetSpan(Int32, Int32, System.ReadOnlySpan`1[System.Char] ByRef)</S>
+                        <S>System.Object Clone()</S>
+                        <S>System.String Copy(System.String)</S>
+                        <S>Void CopyTo(Int32, Char[], Int32, Int32)</S>
+                        <S>Void CopyTo(System.Span`1[System.Char])</S>
+                        <S>Boolean TryCopyTo(System.Span`1[System.Char])</S>
+                        <S>Char[] ToCharArray()</S>
+                        <S>Char[] ToCharArray(Int32, Int32)</S>
+                        <S>Boolean IsNullOrEmpty(System.String)</S>
+                        <S>Boolean IsNullOrWhiteSpace(System.String)</S>
+                        <S>Char&amp; GetPinnableReference()</S>
+                        <S>Char&amp; GetRawStringData()</S>
+                        <S>UInt16&amp; GetRawStringDataAsUInt16()</S>
+                        <S>System.String CreateStringFromEncoding(Byte*, Int32, System.Text.Encoding)</S>
+                        <S>System.String CreateFromChar(Char)</S>
+                        <S>System.String CreateFromChar(Char, Char)</S>
+                        <S>System.String ToString()</S>
+                        <S>System.String ToString(System.IFormatProvider)</S>
+                        <S>System.CharEnumerator GetEnumerator()</S>
+                        <S>System.Collections.Generic.IEnumerator`1[System.Char] System.Collections.Generic.IEnumerable&lt;System.Char&gt;.GetEnumerator()</S>
+                        <S>System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()</S>
+                        <S>System.Text.StringRuneEnumerator EnumerateRunes()</S>
+                        <S>Int32 wcslen(Char*)</S>
+                        <S>Int32 strlen(Byte*)</S>
+                        <S>System.TypeCode GetTypeCode()</S>
+                        <S>Boolean System.IConvertible.ToBoolean(System.IFormatProvider)</S>
+                        <S>Char System.IConvertible.ToChar(System.IFormatProvider)</S>
+                        <S>SByte System.IConvertible.ToSByte(System.IFormatProvider)</S>
+                        <S>Byte System.IConvertible.ToByte(System.IFormatProvider)</S>
+                        <S>Int16 System.IConvertible.ToInt16(System.IFormatProvider)</S>
+                        <S>UInt16 System.IConvertible.ToUInt16(System.IFormatProvider)</S>
+                        <S>Int32 System.IConvertible.ToInt32(System.IFormatProvider)</S>
+                        <S>UInt32 System.IConvertible.ToUInt32(System.IFormatProvider)</S>
+                        <S>Int64 System.IConvertible.ToInt64(System.IFormatProvider)</S>
+                        <S>UInt64 System.IConvertible.ToUInt64(System.IFormatProvider)</S>
+                        <S>Single System.IConvertible.ToSingle(System.IFormatProvider)</S>
+                        <S>Double System.IConvertible.ToDouble(System.IFormatProvider)</S>
+                        <S>System.Decimal System.IConvertible.ToDecimal(System.IFormatProvider)</S>
+                        <S>System.DateTime System.IConvertible.ToDateTime(System.IFormatProvider)</S>
+                        <S>System.Object System.IConvertible.ToType(System.Type, System.IFormatProvider)</S>
+                        <S>Boolean IsNormalized()</S>
+                        <S>Boolean IsNormalized(System.Text.NormalizationForm)</S>
+                        <S>System.String Normalize()</S>
+                        <S>System.String Normalize(System.Text.NormalizationForm)</S>
+                        <S>Boolean IsAscii()</S>
+                        <S>Char get_Chars(Int32)</S>
+                        <S>Int32 get_Length()</S>
+                        <S>Void FillStringChecked(System.String, Int32, System.String)</S>
+                        <S>System.String Concat(System.Object)</S>
+                        <S>System.String Concat(System.Object, System.Object)</S>
+                        <S>System.String Concat(System.Object, System.Object, System.Object)</S>
+                        <S>System.String Concat(System.Object[])</S>
+                        <S>System.String Concat[T](System.Collections.Generic.IEnumerable`1[T])</S>
+                        <S>System.String Concat(System.Collections.Generic.IEnumerable`1[System.String])</S>
+                        <S>System.String Concat(System.String, System.String)</S>
+                        <S>System.String Concat(System.String, System.String, System.String)</S>
+                        <S>System.String Concat(System.String, System.String, System.String, System.String)</S>
+                        <S>System.String Concat(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char])</S>
+                        <S>System.String Concat(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char])</S>
+                        <S>System.String Concat(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char])</S>
+                        <S>System.String Concat(System.String[])</S>
+                        <S>System.String Format(System.String, System.Object)</S>
+                        <S>System.String Format(System.String, System.Object, System.Object)</S>
+                        <S>System.String Format(System.String, System.Object, System.Object, System.Object)</S>
+                        <S>System.String Format(System.String, System.Object[])</S>
+                        <S>System.String Format(System.IFormatProvider, System.String, System.Object)</S>
+                        <S>System.String Format(System.IFormatProvider, System.String, System.Object, System.Object)</S>
+                        <S>System.String Format(System.IFormatProvider, System.String, System.Object, System.Object, System.Object)</S>
+                        <S>System.String Format(System.IFormatProvider, System.String, System.Object[])</S>
+                        <S>System.String FormatHelper(System.IFormatProvider, System.String, System.ReadOnlySpan`1[System.Object])</S>
+                        <S>System.String Insert(Int32, System.String)</S>
+                        <S>System.String Join(Char, System.String[])</S>
+                        <S>System.String Join(System.String, System.String[])</S>
+                        <S>System.String Join(Char, System.String[], Int32, Int32)</S>
+                        <S>System.String Join(System.String, System.String[], Int32, Int32)</S>
+                        <S>System.String JoinCore(System.ReadOnlySpan`1[System.Char], System.String[], Int32, Int32)</S>
+                        <S>System.String Join(System.String, System.Collections.Generic.IEnumerable`1[System.String])</S>
+                        <S>System.String Join(Char, System.Object[])</S>
+                        <S>System.String Join(System.String, System.Object[])</S>
+                        <S>System.String JoinCore(System.ReadOnlySpan`1[System.Char], System.Object[])</S>
+                        <S>System.String Join[T](Char, System.Collections.Generic.IEnumerable`1[T])</S>
+                        <S>System.String Join[T](System.String, System.Collections.Generic.IEnumerable`1[T])</S>
+                        <S>System.String JoinCore[T](System.ReadOnlySpan`1[System.Char], System.Collections.Generic.IEnumerable`1[T])</S>
+                        <S>System.String JoinCore(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.String])</S>
+                        <S>System.String PadLeft(Int32)</S>
+                        <S>System.String PadLeft(Int32, Char)</S>
+                        <S>System.String PadRight(Int32)</S>
+                        <S>System.String PadRight(Int32, Char)</S>
+                        <S>System.String Remove(Int32, Int32)</S>
+                        <S>System.String Remove(Int32)</S>
+                        <S>System.String Replace(System.String, System.String, Boolean, System.Globalization.CultureInfo)</S>
+                        <S>System.String Replace(System.String, System.String, System.StringComparison)</S>
+                        <S>System.String ReplaceCore(System.String, System.String, System.Globalization.CompareInfo, System.Globalization.CompareOptions)</S>
+                        <S>System.String ReplaceCore(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.Globalization.CompareInfo, System.Globalization.CompareOptions)</S>
+                        <S>System.String Replace(Char, Char)</S>
+                        <S>System.String Replace(System.String, System.String)</S>
+                        <S>System.String ReplaceHelper(Int32, System.String, System.ReadOnlySpan`1[System.Int32])</S>
+                        <S>System.String ReplaceLineEndings()</S>
+                        <S>System.String ReplaceLineEndings(System.String)</S>
+                        <S>Int32 IndexOfNewlineChar(System.ReadOnlySpan`1[System.Char], Int32 ByRef)</S>
+                        <S>System.String[] Split(Char, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(Char, Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(Char[])</S>
+                        <S>System.String[] Split(Char[], Int32)</S>
+                        <S>System.String[] Split(Char[], System.StringSplitOptions)</S>
+                        <S>System.String[] Split(Char[], Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] SplitInternal(System.ReadOnlySpan`1[System.Char], Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(System.String, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(System.String, Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] Split(System.String[], System.StringSplitOptions)</S>
+                        <S>System.String[] Split(System.String[], Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] SplitInternal(System.String, System.String[], Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] CreateSplitArrayOfThisAsSoleValue(System.StringSplitOptions, Int32)</S>
+                        <S>System.String[] SplitInternal(System.String, Int32, System.StringSplitOptions)</S>
+                        <S>System.String[] SplitWithoutPostProcessing(System.ReadOnlySpan`1[System.Int32], System.ReadOnlySpan`1[System.Int32], Int32, Int32)</S>
+                        <S>System.String[] SplitWithPostProcessing(System.ReadOnlySpan`1[System.Int32], System.ReadOnlySpan`1[System.Int32], Int32, Int32, System.StringSplitOptions)</S>
+                        <S>Void MakeSeparatorList(System.ReadOnlySpan`1[System.Char], System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef)</S>
+                        <S>Void MakeSeparatorListVectorized(System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef, Char, Char, Char)</S>
+                        <S>Void MakeSeparatorList(System.String, System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef)</S>
+                        <S>Void MakeSeparatorList(System.String[], System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef, System.Collections.Generic.ValueListBuilder`1[System.Int32] ByRef)</S>
+                        <S>Void CheckStringSplitOptions(System.StringSplitOptions)</S>
+                        <S>System.String Substring(Int32)</S>
+                        <S>System.String Substring(Int32, Int32)</S>
+                        <S>Void ThrowSubstringArgumentOutOfRange(Int32, Int32)</S>
+                        <S>System.String InternalSubString(Int32, Int32)</S>
+                        <S>System.String ToLower()</S>
+                        <S>System.String ToLower(System.Globalization.CultureInfo)</S>
+                        <S>System.String ToLowerInvariant()</S>
+                        <S>System.String ToUpper()</S>
+                        <S>System.String ToUpper(System.Globalization.CultureInfo)</S>
+                        <S>System.String ToUpperInvariant()</S>
+                        <S>System.String Trim()</S>
+                        <S>System.String Trim(Char)</S>
+                        <S>System.String Trim(Char[])</S>
+                        <S>System.String TrimStart()</S>
+                        <S>System.String TrimStart(Char)</S>
+                        <S>System.String TrimStart(Char[])</S>
+                        <S>System.String TrimEnd()</S>
+                        <S>System.String TrimEnd(Char)</S>
+                        <S>System.String TrimEnd(Char[])</S>
+                        <S>System.String TrimWhiteSpaceHelper(System.Text.TrimType)</S>
+                        <S>System.String TrimHelper(Char*, Int32, System.Text.TrimType)</S>
+                        <S>System.String CreateTrimmedString(Int32, Int32)</S>
+                        <S>Boolean Contains(System.String)</S>
+                        <S>Boolean Contains(System.String, System.StringComparison)</S>
+                        <S>Boolean Contains(Char)</S>
+                        <S>Boolean Contains(Char, System.StringComparison)</S>
+                        <S>Int32 IndexOf(Char)</S>
+                        <S>Int32 IndexOf(Char, Int32)</S>
+                        <S>Int32 IndexOf(Char, System.StringComparison)</S>
+                        <S>Int32 IndexOfCharOrdinalIgnoreCase(Char)</S>
+                        <S>Int32 IndexOf(Char, Int32, Int32)</S>
+                        <S>Int32 IndexOfAny(Char[])</S>
+                        <S>Int32 IndexOfAny(Char[], Int32)</S>
+                        <S>Int32 IndexOfAny(Char[], Int32, Int32)</S>
+                        <S>Int32 IndexOf(System.String)</S>
+                        <S>Int32 IndexOf(System.String, Int32)</S>
+                        <S>Int32 IndexOf(System.String, Int32, Int32)</S>
+                        <S>Int32 IndexOf(System.String, System.StringComparison)</S>
+                        <S>Int32 IndexOf(System.String, Int32, System.StringComparison)</S>
+                        <S>Int32 IndexOf(System.String, Int32, Int32, System.StringComparison)</S>
+                        <S>Int32 LastIndexOf(Char)</S>
+                        <S>Int32 LastIndexOf(Char, Int32)</S>
+                        <S>Int32 LastIndexOf(Char, Int32, Int32)</S>
+                        <S>Int32 LastIndexOfAny(Char[])</S>
+                        <S>Int32 LastIndexOfAny(Char[], Int32)</S>
+                        <S>Int32 LastIndexOfAny(Char[], Int32, Int32)</S>
+                        <S>Int32 LastIndexOf(System.String)</S>
+                        <S>Int32 LastIndexOf(System.String, Int32)</S>
+                        <S>Int32 LastIndexOf(System.String, Int32, Int32)</S>
+                        <S>Int32 LastIndexOf(System.String, System.StringComparison)</S>
+                        <S>Int32 LastIndexOf(System.String, Int32, System.StringComparison)</S>
+                        <S>Int32 LastIndexOf(System.String, Int32, Int32, System.StringComparison)</S>
+                        <S>Int32 &lt;GetNonRandomizedHashCodeOrdinalIgnoreCase&gt;g__GetNonRandomizedHashCodeOrdinalIgnoreCaseSlow|47_0(System.String)</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredNestedTypes" RefId="11">
+                      <TN RefId="10">
+                        <T>System.Reflection.TypeInfo+&lt;get_DeclaredNestedTypes&gt;d__22</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <IE />
+                    </Obj>
+                    <Obj N="DeclaredProperties" RefId="12">
+                      <TN RefId="11">
+                        <T>System.Reflection.PropertyInfo[]</T>
+                        <T>System.Array</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST>
+                        <S>Char Chars [Int32]</S>
+                        <S>Int32 Length</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="ImplementedInterfaces" RefId="13">
+                      <TNRef RefId="4" />
+                      <LST>
+                        <S>System.IComparable</S>
+                        <S>System.Collections.IEnumerable</S>
+                        <S>System.IConvertible</S>
+                        <S>System.Collections.Generic.IEnumerable`1[System.Char]</S>
+                        <S>System.IComparable`1[System.String]</S>
+                        <S>System.IEquatable`1[System.String]</S>
+                        <S>System.ICloneable</S>
+                      </LST>
+                    </Obj>
+                    <B N="IsInterface">false</B>
+                    <B N="IsNested">false</B>
+                    <B N="IsArray">false</B>
+                    <B N="IsByRef">false</B>
+                    <B N="IsPointer">false</B>
+                    <B N="IsGenericTypeParameter">false</B>
+                    <B N="IsGenericMethodParameter">false</B>
+                    <B N="IsVariableBoundArray">false</B>
+                    <B N="HasElementType">false</B>
+                    <Ref N="GenericTypeArguments" RefId="5" />
+                    <S N="Attributes">AutoLayout, AnsiClass, Class, Public, Sealed, Serializable, BeforeFieldInit</S>
+                    <B N="IsAbstract">false</B>
+                    <B N="IsImport">false</B>
+                    <B N="IsSealed">true</B>
+                    <B N="IsSpecialName">false</B>
+                    <B N="IsClass">true</B>
+                    <B N="IsNestedAssembly">false</B>
+                    <B N="IsNestedFamANDAssem">false</B>
+                    <B N="IsNestedFamily">false</B>
+                    <B N="IsNestedFamORAssem">false</B>
+                    <B N="IsNestedPrivate">false</B>
+                    <B N="IsNestedPublic">false</B>
+                    <B N="IsNotPublic">false</B>
+                    <B N="IsPublic">true</B>
+                    <B N="IsAutoLayout">true</B>
+                    <B N="IsExplicitLayout">false</B>
+                    <B N="IsLayoutSequential">false</B>
+                    <B N="IsAnsiClass">true</B>
+                    <B N="IsAutoClass">false</B>
+                    <B N="IsUnicodeClass">false</B>
+                    <B N="IsCOMObject">false</B>
+                    <B N="IsContextful">false</B>
+                    <B N="IsMarshalByRef">false</B>
+                    <B N="IsPrimitive">false</B>
+                    <B N="IsValueType">false</B>
+                    <B N="IsSignatureType">false</B>
+                    <Nil N="TypeInitializer" />
+                    <B N="IsSerializable">true</B>
+                    <B N="IsVisible">true</B>
+                    <Obj N="CustomAttributes" RefId="14">
+                      <TN RefId="12">
+                        <T>System.Collections.ObjectModel.ReadOnlyCollection`1[[System.Reflection.CustomAttributeData, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST>
+                        <S>[System.SerializableAttribute()]</S>
+                        <S>[System.Runtime.CompilerServices.NullableContextAttribute((Byte)1)]</S>
+                        <S>[System.Runtime.CompilerServices.NullableAttribute((Byte)0)]</S>
+                        <S>[System.Reflection.DefaultMemberAttribute("Chars")]</S>
+                        <S>[System.Runtime.Versioning.NonVersionableAttribute()]</S>
+                        <S>[System.Runtime.CompilerServices.TypeForwardedFromAttribute("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")]</S>
+                      </LST>
+                    </Obj>
+                  </Props>
+                </Obj>
+                <Obj N="Aliases" RefId="15">
+                  <TN RefId="13">
+                    <T>System.Collections.ObjectModel.Collection`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RedirectUri</S>
+            <Obj N="Value" RefId="16">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">RedirectUri</S>
+                <Obj N="ParameterType" RefId="17">
+                  <TNRef RefId="3" />
+                  <ToString>System.Uri</ToString>
+                  <Props>
+                    <B N="IsCollectible">false</B>
+                    <S N="FullName">System.Uri</S>
+                    <S N="AssemblyQualifiedName">System.Uri, System.Private.Uri, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</S>
+                    <S N="Namespace">System</S>
+                    <G N="GUID">a6f5efa3-b39f-3428-9f82-8533d5df4847</G>
+                    <B N="IsEnum">false</B>
+                    <B N="IsSZArray">false</B>
+                    <B N="ContainsGenericParameters">false</B>
+                    <S N="StructLayoutAttribute">System.Runtime.InteropServices.StructLayoutAttribute</S>
+                    <S N="Name">Uri</S>
+                    <Nil N="DeclaringType" />
+                    <S N="Assembly">System.Private.Uri, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</S>
+                    <Obj N="BaseType" RefId="18">
+                      <S>System.Object</S>
+                    </Obj>
+                    <B N="IsByRefLike">false</B>
+                    <B N="IsConstructedGenericType">false</B>
+                    <B N="IsGenericType">false</B>
+                    <B N="IsGenericTypeDefinition">false</B>
+                    <B N="IsGenericParameter">false</B>
+                    <B N="IsTypeDefinition">true</B>
+                    <B N="IsSecurityCritical">true</B>
+                    <B N="IsSecuritySafeCritical">false</B>
+                    <B N="IsSecurityTransparent">false</B>
+                    <S N="MemberType">TypeInfo</S>
+                    <I32 N="MetadataToken">33554450</I32>
+                    <S N="Module">System.Private.Uri.dll</S>
+                    <Nil N="ReflectedType" />
+                    <S N="TypeHandle">System.RuntimeTypeHandle</S>
+                    <Ref N="UnderlyingSystemType" RefId="17" />
+                    <Ref N="GenericTypeParameters" RefId="5" />
+                    <Obj N="DeclaredConstructors" RefId="19">
+                      <TNRef RefId="5" />
+                      <LST>
+                        <S>Void .ctor(System.String)</S>
+                        <S>Void .ctor(System.String, Boolean)</S>
+                        <S>Void .ctor(System.Uri, System.String, Boolean)</S>
+                        <S>Void .ctor(System.String, System.UriKind)</S>
+                        <S>Void .ctor(System.String, System.UriCreationOptions ByRef)</S>
+                        <S>Void .ctor(System.Uri, System.String)</S>
+                        <S>Void .ctor(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</S>
+                        <S>Void .ctor(System.Uri, System.Uri)</S>
+                        <S>Void .ctor(Flags, System.UriParser, System.String)</S>
+                        <S>Void .cctor()</S>
+                      </LST>
+                    </Obj>
+                    <Ref N="DeclaredEvents" RefId="7" />
+                    <Obj N="DeclaredFields" RefId="20">
+                      <TNRef RefId="7" />
+                      <LST>
+                        <S>System.String _string</S>
+                        <S>System.String _originalUnicodeString</S>
+                        <S>System.UriParser _syntax</S>
+                        <S>Flags _flags</S>
+                        <S>UriInfo _info</S>
+                        <S>System.String UriSchemeFile</S>
+                        <S>System.String UriSchemeFtp</S>
+                        <S>System.String UriSchemeSftp</S>
+                        <S>System.String UriSchemeFtps</S>
+                        <S>System.String UriSchemeGopher</S>
+                        <S>System.String UriSchemeHttp</S>
+                        <S>System.String UriSchemeHttps</S>
+                        <S>System.String UriSchemeWs</S>
+                        <S>System.String UriSchemeWss</S>
+                        <S>System.String UriSchemeMailto</S>
+                        <S>System.String UriSchemeNews</S>
+                        <S>System.String UriSchemeNntp</S>
+                        <S>System.String UriSchemeSsh</S>
+                        <S>System.String UriSchemeTelnet</S>
+                        <S>System.String UriSchemeNetTcp</S>
+                        <S>System.String UriSchemeNetPipe</S>
+                        <S>System.String SchemeDelimiter</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMembers" RefId="21">
+                      <TNRef RefId="8" />
+                      <LST>
+                        <S>Void InterlockedSetFlags(Flags)</S>
+                        <S>Boolean get_IsImplicitFile()</S>
+                        <S>Boolean get_IsUncOrDosPath()</S>
+                        <S>Boolean get_IsDosPath()</S>
+                        <S>Boolean get_IsUncPath()</S>
+                        <S>Flags get_HostType()</S>
+                        <S>System.UriParser get_Syntax()</S>
+                        <S>Boolean get_IsNotAbsoluteUri()</S>
+                        <S>Boolean get_IriParsing()</S>
+                        <S>Boolean IriParsingStatic(System.UriParser)</S>
+                        <S>Boolean get_DisablePathAndQueryCanonicalization()</S>
+                        <S>Boolean get_UserDrivenParsing()</S>
+                        <S>Int32 get_SecuredPathIndex()</S>
+                        <S>Boolean NotAny(Flags)</S>
+                        <S>Boolean InFact(Flags)</S>
+                        <S>Boolean StaticNotAny(Flags, Flags)</S>
+                        <S>Boolean StaticInFact(Flags, Flags)</S>
+                        <S>UriInfo EnsureUriInfo()</S>
+                        <S>Void EnsureParseRemaining()</S>
+                        <S>Void EnsureHostString(Boolean)</S>
+                        <S>Void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</S>
+                        <S>Void GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</S>
+                        <S>Void CreateUri(System.Uri, System.String, Boolean)</S>
+                        <S>Void GetCombinedString(System.Uri, System.String, Boolean, System.String ByRef)</S>
+                        <S>System.UriFormatException GetException(System.ParsingError)</S>
+                        <S>System.String get_AbsolutePath()</S>
+                        <S>System.String get_PrivateAbsolutePath()</S>
+                        <S>System.String get_AbsoluteUri()</S>
+                        <S>System.String get_LocalPath()</S>
+                        <S>System.String get_Authority()</S>
+                        <S>System.UriHostNameType get_HostNameType()</S>
+                        <S>Boolean get_IsDefaultPort()</S>
+                        <S>Boolean get_IsFile()</S>
+                        <S>Boolean get_IsLoopback()</S>
+                        <S>System.String get_PathAndQuery()</S>
+                        <S>System.String[] get_Segments()</S>
+                        <S>Boolean get_IsUnc()</S>
+                        <S>System.String get_Host()</S>
+                        <S>Boolean StaticIsFile(System.UriParser)</S>
+                        <S>System.String GetLocalPath()</S>
+                        <S>Int32 get_Port()</S>
+                        <S>System.String get_Query()</S>
+                        <S>System.String get_Fragment()</S>
+                        <S>System.String get_Scheme()</S>
+                        <S>System.String get_OriginalString()</S>
+                        <S>System.String get_DnsSafeHost()</S>
+                        <S>System.String get_IdnHost()</S>
+                        <S>Boolean get_IsAbsoluteUri()</S>
+                        <S>Boolean get_UserEscaped()</S>
+                        <S>System.String get_UserInfo()</S>
+                        <S>System.UriHostNameType CheckHostName(System.String)</S>
+                        <S>System.String GetLeftPart(System.UriPartial)</S>
+                        <S>System.String HexEscape(Char)</S>
+                        <S>Char HexUnescape(System.String, Int32 ByRef)</S>
+                        <S>Boolean IsHexEncoding(System.String, Int32)</S>
+                        <S>Boolean CheckSchemeName(System.String)</S>
+                        <S>Boolean IsHexDigit(Char)</S>
+                        <S>Int32 FromHex(Char)</S>
+                        <S>Int32 GetHashCode()</S>
+                        <S>System.String ToString()</S>
+                        <S>Boolean op_Equality(System.Uri, System.Uri)</S>
+                        <S>Boolean op_Inequality(System.Uri, System.Uri)</S>
+                        <S>Boolean Equals(System.Object)</S>
+                        <S>System.Uri MakeRelativeUri(System.Uri)</S>
+                        <S>Boolean CheckForColonInFirstPathSegment(System.String)</S>
+                        <S>System.String InternalEscapeString(System.String)</S>
+                        <S>System.ParsingError ParseScheme(System.String, Flags ByRef, System.UriParser ByRef)</S>
+                        <S>System.UriFormatException ParseMinimal()</S>
+                        <S>System.ParsingError PrivateParseMinimal()</S>
+                        <S>Void CreateUriInfo(Flags)</S>
+                        <S>Void CreateHostString()</S>
+                        <S>System.String CreateHostStringHelper(System.String, Int32, Int32, Flags ByRef, System.String ByRef)</S>
+                        <S>Void GetHostViaCustomSyntax()</S>
+                        <S>System.String GetParts(System.UriComponents, System.UriFormat)</S>
+                        <S>System.String GetEscapedParts(System.UriComponents)</S>
+                        <S>System.String GetUnescapedParts(System.UriComponents, System.UriFormat)</S>
+                        <S>System.String ReCreateParts(System.UriComponents, UInt16, System.UriFormat)</S>
+                        <S>System.String GetUriPartsFromUserString(System.UriComponents)</S>
+                        <S>Void GetLengthWithoutTrailingSpaces(System.String, Int32 ByRef, Int32)</S>
+                        <S>Void ParseRemaining()</S>
+                        <S>Int32 ParseSchemeCheckImplicitFile(Char*, Int32, System.ParsingError ByRef, Flags ByRef, System.UriParser ByRef)</S>
+                        <S>System.ParsingError CheckSchemeSyntax(System.ReadOnlySpan`1[System.Char], System.UriParser ByRef)</S>
+                        <S>Int32 CheckAuthorityHelper(Char*, Int32, Int32, System.ParsingError ByRef, Flags ByRef, System.UriParser, System.String ByRef)</S>
+                        <S>Void CheckAuthorityHelperHandleDnsIri(Char*, Int32, Int32, Boolean, Flags ByRef, Boolean ByRef, System.String ByRef, System.ParsingError ByRef)</S>
+                        <S>Check CheckCanonical(Char*, Int32 ByRef, Int32, Char)</S>
+                        <S>Void GetCanonicalPath(System.Text.ValueStringBuilder ByRef, System.UriFormat)</S>
+                        <S>Void UnescapeOnly(Char*, Int32, Int32 ByRef, Char, Char, Char)</S>
+                        <S>Void Compress(Char[], Int32, Int32 ByRef, System.UriParser)</S>
+                        <S>Int32 Compress(System.Span`1[System.Char], System.UriParser)</S>
+                        <S>System.String CombineUri(System.Uri, System.String, System.UriFormat)</S>
+                        <S>System.String PathDifference(System.String, System.String, Boolean)</S>
+                        <S>System.String MakeRelative(System.Uri)</S>
+                        <S>Void Canonicalize()</S>
+                        <S>Void Parse()</S>
+                        <S>Void Escape()</S>
+                        <S>System.String Unescape(System.String)</S>
+                        <S>System.String EscapeString(System.String)</S>
+                        <S>Void CheckSecurity()</S>
+                        <S>Boolean IsReservedCharacter(Char)</S>
+                        <S>Boolean IsExcludedCharacter(Char)</S>
+                        <S>Boolean IsBadFileSystemCharacter(Char)</S>
+                        <S>Void CreateThis(System.String, Boolean, System.UriKind, System.UriCreationOptions ByRef)</S>
+                        <S>Void InitializeUri(System.ParsingError, System.UriKind, System.UriFormatException ByRef)</S>
+                        <S>Boolean CheckForUnicodeOrEscapedUnreserved(System.String)</S>
+                        <S>Boolean TryCreate(System.String, System.UriKind, System.Uri ByRef)</S>
+                        <S>Boolean TryCreate(System.String, System.UriCreationOptions ByRef, System.Uri ByRef)</S>
+                        <S>Boolean TryCreate(System.Uri, System.String, System.Uri ByRef)</S>
+                        <S>Boolean TryCreate(System.Uri, System.Uri, System.Uri ByRef)</S>
+                        <S>System.String GetComponents(System.UriComponents, System.UriFormat)</S>
+                        <S>System.String InternalGetComponents(System.UriComponents, System.UriFormat)</S>
+                        <S>Int32 Compare(System.Uri, System.Uri, System.UriComponents, System.UriFormat, System.StringComparison)</S>
+                        <S>Boolean IsWellFormedOriginalString()</S>
+                        <S>Boolean IsWellFormedUriString(System.String, System.UriKind)</S>
+                        <S>Boolean InternalIsWellFormedOriginalString()</S>
+                        <S>System.String UnescapeDataString(System.String)</S>
+                        <S>System.String EscapeUriString(System.String)</S>
+                        <S>System.String EscapeDataString(System.String)</S>
+                        <S>System.String EscapeUnescapeIri(System.String, Int32, Int32, System.UriComponents)</S>
+                        <S>System.Uri CreateHelper(System.String, Boolean, System.UriKind, System.UriFormatException ByRef, System.UriCreationOptions ByRef)</S>
+                        <S>System.Uri ResolveHelper(System.Uri, System.Uri, System.String ByRef, Boolean ByRef)</S>
+                        <S>System.String GetRelativeSerializationString(System.UriFormat)</S>
+                        <S>System.String GetComponentsHelper(System.UriComponents, System.UriFormat)</S>
+                        <S>Boolean IsBaseOf(System.Uri)</S>
+                        <S>Boolean IsBaseOfHelper(System.Uri)</S>
+                        <S>Void CreateThisFromUri(System.Uri)</S>
+                        <S>Char &lt;CheckSchemeSyntax&gt;g__ToLowerCaseAscii|158_0(Char)</S>
+                        <S>Void .ctor(System.String)</S>
+                        <S>Void .ctor(System.String, Boolean)</S>
+                        <S>Void .ctor(System.Uri, System.String, Boolean)</S>
+                        <S>Void .ctor(System.String, System.UriKind)</S>
+                        <S>Void .ctor(System.String, System.UriCreationOptions ByRef)</S>
+                        <S>Void .ctor(System.Uri, System.String)</S>
+                        <S>Void .ctor(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</S>
+                        <S>Void .ctor(System.Uri, System.Uri)</S>
+                        <S>Void .ctor(Flags, System.UriParser, System.String)</S>
+                        <S>Void .cctor()</S>
+                        <S>Boolean IsImplicitFile</S>
+                        <S>Boolean IsUncOrDosPath</S>
+                        <S>Boolean IsDosPath</S>
+                        <S>Boolean IsUncPath</S>
+                        <S>Flags HostType</S>
+                        <S>System.UriParser Syntax</S>
+                        <S>Boolean IsNotAbsoluteUri</S>
+                        <S>Boolean IriParsing</S>
+                        <S>Boolean DisablePathAndQueryCanonicalization</S>
+                        <S>Boolean UserDrivenParsing</S>
+                        <S>Int32 SecuredPathIndex</S>
+                        <S>System.String AbsolutePath</S>
+                        <S>System.String PrivateAbsolutePath</S>
+                        <S>System.String AbsoluteUri</S>
+                        <S>System.String LocalPath</S>
+                        <S>System.String Authority</S>
+                        <S>System.UriHostNameType HostNameType</S>
+                        <S>Boolean IsDefaultPort</S>
+                        <S>Boolean IsFile</S>
+                        <S>Boolean IsLoopback</S>
+                        <S>System.String PathAndQuery</S>
+                        <S>System.String[] Segments</S>
+                        <S>Boolean IsUnc</S>
+                        <S>System.String Host</S>
+                        <S>Int32 Port</S>
+                        <S>System.String Query</S>
+                        <S>System.String Fragment</S>
+                        <S>System.String Scheme</S>
+                        <S>System.String OriginalString</S>
+                        <S>System.String DnsSafeHost</S>
+                        <S>System.String IdnHost</S>
+                        <S>Boolean IsAbsoluteUri</S>
+                        <S>Boolean UserEscaped</S>
+                        <S>System.String UserInfo</S>
+                        <S>System.String _string</S>
+                        <S>System.String _originalUnicodeString</S>
+                        <S>System.UriParser _syntax</S>
+                        <S>Flags _flags</S>
+                        <S>UriInfo _info</S>
+                        <S>System.String UriSchemeFile</S>
+                        <S>System.String UriSchemeFtp</S>
+                        <S>System.String UriSchemeSftp</S>
+                        <S>System.String UriSchemeFtps</S>
+                        <S>System.String UriSchemeGopher</S>
+                        <S>System.String UriSchemeHttp</S>
+                        <S>System.String UriSchemeHttps</S>
+                        <S>System.String UriSchemeWs</S>
+                        <S>System.String UriSchemeWss</S>
+                        <S>System.String UriSchemeMailto</S>
+                        <S>System.String UriSchemeNews</S>
+                        <S>System.String UriSchemeNntp</S>
+                        <S>System.String UriSchemeSsh</S>
+                        <S>System.String UriSchemeTelnet</S>
+                        <S>System.String UriSchemeNetTcp</S>
+                        <S>System.String UriSchemeNetPipe</S>
+                        <S>System.String SchemeDelimiter</S>
+                        <S>System.Uri+Flags</S>
+                        <S>System.Uri+UriInfo</S>
+                        <S>System.Uri+Offset</S>
+                        <S>System.Uri+MoreInfo</S>
+                        <S>System.Uri+Check</S>
+                        <S>System.Uri+&lt;&gt;c</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMethods" RefId="22">
+                      <TNRef RefId="9" />
+                      <LST>
+                        <S>Void InterlockedSetFlags(Flags)</S>
+                        <S>Boolean get_IsImplicitFile()</S>
+                        <S>Boolean get_IsUncOrDosPath()</S>
+                        <S>Boolean get_IsDosPath()</S>
+                        <S>Boolean get_IsUncPath()</S>
+                        <S>Flags get_HostType()</S>
+                        <S>System.UriParser get_Syntax()</S>
+                        <S>Boolean get_IsNotAbsoluteUri()</S>
+                        <S>Boolean get_IriParsing()</S>
+                        <S>Boolean IriParsingStatic(System.UriParser)</S>
+                        <S>Boolean get_DisablePathAndQueryCanonicalization()</S>
+                        <S>Boolean get_UserDrivenParsing()</S>
+                        <S>Int32 get_SecuredPathIndex()</S>
+                        <S>Boolean NotAny(Flags)</S>
+                        <S>Boolean InFact(Flags)</S>
+                        <S>Boolean StaticNotAny(Flags, Flags)</S>
+                        <S>Boolean StaticInFact(Flags, Flags)</S>
+                        <S>UriInfo EnsureUriInfo()</S>
+                        <S>Void EnsureParseRemaining()</S>
+                        <S>Void EnsureHostString(Boolean)</S>
+                        <S>Void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</S>
+                        <S>Void GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</S>
+                        <S>Void CreateUri(System.Uri, System.String, Boolean)</S>
+                        <S>Void GetCombinedString(System.Uri, System.String, Boolean, System.String ByRef)</S>
+                        <S>System.UriFormatException GetException(System.ParsingError)</S>
+                        <S>System.String get_AbsolutePath()</S>
+                        <S>System.String get_PrivateAbsolutePath()</S>
+                        <S>System.String get_AbsoluteUri()</S>
+                        <S>System.String get_LocalPath()</S>
+                        <S>System.String get_Authority()</S>
+                        <S>System.UriHostNameType get_HostNameType()</S>
+                        <S>Boolean get_IsDefaultPort()</S>
+                        <S>Boolean get_IsFile()</S>
+                        <S>Boolean get_IsLoopback()</S>
+                        <S>System.String get_PathAndQuery()</S>
+                        <S>System.String[] get_Segments()</S>
+                        <S>Boolean get_IsUnc()</S>
+                        <S>System.String get_Host()</S>
+                        <S>Boolean StaticIsFile(System.UriParser)</S>
+                        <S>System.String GetLocalPath()</S>
+                        <S>Int32 get_Port()</S>
+                        <S>System.String get_Query()</S>
+                        <S>System.String get_Fragment()</S>
+                        <S>System.String get_Scheme()</S>
+                        <S>System.String get_OriginalString()</S>
+                        <S>System.String get_DnsSafeHost()</S>
+                        <S>System.String get_IdnHost()</S>
+                        <S>Boolean get_IsAbsoluteUri()</S>
+                        <S>Boolean get_UserEscaped()</S>
+                        <S>System.String get_UserInfo()</S>
+                        <S>System.UriHostNameType CheckHostName(System.String)</S>
+                        <S>System.String GetLeftPart(System.UriPartial)</S>
+                        <S>System.String HexEscape(Char)</S>
+                        <S>Char HexUnescape(System.String, Int32 ByRef)</S>
+                        <S>Boolean IsHexEncoding(System.String, Int32)</S>
+                        <S>Boolean CheckSchemeName(System.String)</S>
+                        <S>Boolean IsHexDigit(Char)</S>
+                        <S>Int32 FromHex(Char)</S>
+                        <S>Int32 GetHashCode()</S>
+                        <S>System.String ToString()</S>
+                        <S>Boolean op_Equality(System.Uri, System.Uri)</S>
+                        <S>Boolean op_Inequality(System.Uri, System.Uri)</S>
+                        <S>Boolean Equals(System.Object)</S>
+                        <S>System.Uri MakeRelativeUri(System.Uri)</S>
+                        <S>Boolean CheckForColonInFirstPathSegment(System.String)</S>
+                        <S>System.String InternalEscapeString(System.String)</S>
+                        <S>System.ParsingError ParseScheme(System.String, Flags ByRef, System.UriParser ByRef)</S>
+                        <S>System.UriFormatException ParseMinimal()</S>
+                        <S>System.ParsingError PrivateParseMinimal()</S>
+                        <S>Void CreateUriInfo(Flags)</S>
+                        <S>Void CreateHostString()</S>
+                        <S>System.String CreateHostStringHelper(System.String, Int32, Int32, Flags ByRef, System.String ByRef)</S>
+                        <S>Void GetHostViaCustomSyntax()</S>
+                        <S>System.String GetParts(System.UriComponents, System.UriFormat)</S>
+                        <S>System.String GetEscapedParts(System.UriComponents)</S>
+                        <S>System.String GetUnescapedParts(System.UriComponents, System.UriFormat)</S>
+                        <S>System.String ReCreateParts(System.UriComponents, UInt16, System.UriFormat)</S>
+                        <S>System.String GetUriPartsFromUserString(System.UriComponents)</S>
+                        <S>Void GetLengthWithoutTrailingSpaces(System.String, Int32 ByRef, Int32)</S>
+                        <S>Void ParseRemaining()</S>
+                        <S>Int32 ParseSchemeCheckImplicitFile(Char*, Int32, System.ParsingError ByRef, Flags ByRef, System.UriParser ByRef)</S>
+                        <S>System.ParsingError CheckSchemeSyntax(System.ReadOnlySpan`1[System.Char], System.UriParser ByRef)</S>
+                        <S>Int32 CheckAuthorityHelper(Char*, Int32, Int32, System.ParsingError ByRef, Flags ByRef, System.UriParser, System.String ByRef)</S>
+                        <S>Void CheckAuthorityHelperHandleDnsIri(Char*, Int32, Int32, Boolean, Flags ByRef, Boolean ByRef, System.String ByRef, System.ParsingError ByRef)</S>
+                        <S>Check CheckCanonical(Char*, Int32 ByRef, Int32, Char)</S>
+                        <S>Void GetCanonicalPath(System.Text.ValueStringBuilder ByRef, System.UriFormat)</S>
+                        <S>Void UnescapeOnly(Char*, Int32, Int32 ByRef, Char, Char, Char)</S>
+                        <S>Void Compress(Char[], Int32, Int32 ByRef, System.UriParser)</S>
+                        <S>Int32 Compress(System.Span`1[System.Char], System.UriParser)</S>
+                        <S>System.String CombineUri(System.Uri, System.String, System.UriFormat)</S>
+                        <S>System.String PathDifference(System.String, System.String, Boolean)</S>
+                        <S>System.String MakeRelative(System.Uri)</S>
+                        <S>Void Canonicalize()</S>
+                        <S>Void Parse()</S>
+                        <S>Void Escape()</S>
+                        <S>System.String Unescape(System.String)</S>
+                        <S>System.String EscapeString(System.String)</S>
+                        <S>Void CheckSecurity()</S>
+                        <S>Boolean IsReservedCharacter(Char)</S>
+                        <S>Boolean IsExcludedCharacter(Char)</S>
+                        <S>Boolean IsBadFileSystemCharacter(Char)</S>
+                        <S>Void CreateThis(System.String, Boolean, System.UriKind, System.UriCreationOptions ByRef)</S>
+                        <S>Void InitializeUri(System.ParsingError, System.UriKind, System.UriFormatException ByRef)</S>
+                        <S>Boolean CheckForUnicodeOrEscapedUnreserved(System.String)</S>
+                        <S>Boolean TryCreate(System.String, System.UriKind, System.Uri ByRef)</S>
+                        <S>Boolean TryCreate(System.String, System.UriCreationOptions ByRef, System.Uri ByRef)</S>
+                        <S>Boolean TryCreate(System.Uri, System.String, System.Uri ByRef)</S>
+                        <S>Boolean TryCreate(System.Uri, System.Uri, System.Uri ByRef)</S>
+                        <S>System.String GetComponents(System.UriComponents, System.UriFormat)</S>
+                        <S>System.String InternalGetComponents(System.UriComponents, System.UriFormat)</S>
+                        <S>Int32 Compare(System.Uri, System.Uri, System.UriComponents, System.UriFormat, System.StringComparison)</S>
+                        <S>Boolean IsWellFormedOriginalString()</S>
+                        <S>Boolean IsWellFormedUriString(System.String, System.UriKind)</S>
+                        <S>Boolean InternalIsWellFormedOriginalString()</S>
+                        <S>System.String UnescapeDataString(System.String)</S>
+                        <S>System.String EscapeUriString(System.String)</S>
+                        <S>System.String EscapeDataString(System.String)</S>
+                        <S>System.String EscapeUnescapeIri(System.String, Int32, Int32, System.UriComponents)</S>
+                        <S>System.Uri CreateHelper(System.String, Boolean, System.UriKind, System.UriFormatException ByRef, System.UriCreationOptions ByRef)</S>
+                        <S>System.Uri ResolveHelper(System.Uri, System.Uri, System.String ByRef, Boolean ByRef)</S>
+                        <S>System.String GetRelativeSerializationString(System.UriFormat)</S>
+                        <S>System.String GetComponentsHelper(System.UriComponents, System.UriFormat)</S>
+                        <S>Boolean IsBaseOf(System.Uri)</S>
+                        <S>Boolean IsBaseOfHelper(System.Uri)</S>
+                        <S>Void CreateThisFromUri(System.Uri)</S>
+                        <S>Char &lt;CheckSchemeSyntax&gt;g__ToLowerCaseAscii|158_0(Char)</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredNestedTypes" RefId="23">
+                      <TNRef RefId="10" />
+                      <IE>
+                        <S>System.Uri+Flags</S>
+                        <S>System.Uri+UriInfo</S>
+                        <S>System.Uri+Offset</S>
+                        <S>System.Uri+MoreInfo</S>
+                        <S>System.Uri+Check</S>
+                        <S>System.Uri+&lt;&gt;c</S>
+                      </IE>
+                    </Obj>
+                    <Obj N="DeclaredProperties" RefId="24">
+                      <TNRef RefId="11" />
+                      <LST>
+                        <S>Boolean IsImplicitFile</S>
+                        <S>Boolean IsUncOrDosPath</S>
+                        <S>Boolean IsDosPath</S>
+                        <S>Boolean IsUncPath</S>
+                        <S>Flags HostType</S>
+                        <S>System.UriParser Syntax</S>
+                        <S>Boolean IsNotAbsoluteUri</S>
+                        <S>Boolean IriParsing</S>
+                        <S>Boolean DisablePathAndQueryCanonicalization</S>
+                        <S>Boolean UserDrivenParsing</S>
+                        <S>Int32 SecuredPathIndex</S>
+                        <S>System.String AbsolutePath</S>
+                        <S>System.String PrivateAbsolutePath</S>
+                        <S>System.String AbsoluteUri</S>
+                        <S>System.String LocalPath</S>
+                        <S>System.String Authority</S>
+                        <S>System.UriHostNameType HostNameType</S>
+                        <S>Boolean IsDefaultPort</S>
+                        <S>Boolean IsFile</S>
+                        <S>Boolean IsLoopback</S>
+                        <S>System.String PathAndQuery</S>
+                        <S>System.String[] Segments</S>
+                        <S>Boolean IsUnc</S>
+                        <S>System.String Host</S>
+                        <S>Int32 Port</S>
+                        <S>System.String Query</S>
+                        <S>System.String Fragment</S>
+                        <S>System.String Scheme</S>
+                        <S>System.String OriginalString</S>
+                        <S>System.String DnsSafeHost</S>
+                        <S>System.String IdnHost</S>
+                        <S>Boolean IsAbsoluteUri</S>
+                        <S>Boolean UserEscaped</S>
+                        <S>System.String UserInfo</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="ImplementedInterfaces" RefId="25">
+                      <TNRef RefId="4" />
+                      <LST>
+                        <S>System.Runtime.Serialization.ISerializable</S>
+                      </LST>
+                    </Obj>
+                    <B N="IsInterface">false</B>
+                    <B N="IsNested">false</B>
+                    <B N="IsArray">false</B>
+                    <B N="IsByRef">false</B>
+                    <B N="IsPointer">false</B>
+                    <B N="IsGenericTypeParameter">false</B>
+                    <B N="IsGenericMethodParameter">false</B>
+                    <B N="IsVariableBoundArray">false</B>
+                    <B N="HasElementType">false</B>
+                    <Ref N="GenericTypeArguments" RefId="5" />
+                    <S N="Attributes">AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit</S>
+                    <B N="IsAbstract">false</B>
+                    <B N="IsImport">false</B>
+                    <B N="IsSealed">false</B>
+                    <B N="IsSpecialName">false</B>
+                    <B N="IsClass">true</B>
+                    <B N="IsNestedAssembly">false</B>
+                    <B N="IsNestedFamANDAssem">false</B>
+                    <B N="IsNestedFamily">false</B>
+                    <B N="IsNestedFamORAssem">false</B>
+                    <B N="IsNestedPrivate">false</B>
+                    <B N="IsNestedPublic">false</B>
+                    <B N="IsNotPublic">false</B>
+                    <B N="IsPublic">true</B>
+                    <B N="IsAutoLayout">true</B>
+                    <B N="IsExplicitLayout">false</B>
+                    <B N="IsLayoutSequential">false</B>
+                    <B N="IsAnsiClass">true</B>
+                    <B N="IsAutoClass">false</B>
+                    <B N="IsUnicodeClass">false</B>
+                    <B N="IsCOMObject">false</B>
+                    <B N="IsContextful">false</B>
+                    <B N="IsMarshalByRef">false</B>
+                    <B N="IsPrimitive">false</B>
+                    <B N="IsValueType">false</B>
+                    <B N="IsSignatureType">false</B>
+                    <S N="TypeInitializer">Void .cctor()</S>
+                    <B N="IsSerializable">true</B>
+                    <B N="IsVisible">true</B>
+                    <Obj N="CustomAttributes" RefId="26">
+                      <TNRef RefId="12" />
+                      <LST>
+                        <S>[System.SerializableAttribute()]</S>
+                        <S>[System.Runtime.CompilerServices.NullableContextAttribute((Byte)1)]</S>
+                        <S>[System.Runtime.CompilerServices.NullableAttribute((Byte)0)]</S>
+                        <S>[System.Runtime.CompilerServices.TypeForwardedFromAttribute("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")]</S>
+                      </LST>
+                    </Obj>
+                  </Props>
+                </Obj>
+                <Obj N="Aliases" RefId="27">
+                  <TNRef RefId="13" />
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Resource</S>
+            <Obj N="Value" RefId="28">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Resource</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="29">
+                  <TNRef RefId="13" />
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Verbose</S>
+            <Obj N="Value" RefId="30">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Verbose</S>
+                <Obj N="ParameterType" RefId="31">
+                  <TNRef RefId="3" />
+                  <ToString>System.Management.Automation.SwitchParameter</ToString>
+                  <Props>
+                    <B N="IsCollectible">false</B>
+                    <S N="FullName">System.Management.Automation.SwitchParameter</S>
+                    <S N="AssemblyQualifiedName">System.Management.Automation.SwitchParameter, System.Management.Automation, Version=7.3.6.500, Culture=neutral, PublicKeyToken=31bf3856ad364e35</S>
+                    <S N="Namespace">System.Management.Automation</S>
+                    <G N="GUID">ccdea634-aa1e-3939-ac6a-5c1c036f1a46</G>
+                    <B N="IsEnum">false</B>
+                    <B N="IsSZArray">false</B>
+                    <B N="ContainsGenericParameters">false</B>
+                    <S N="StructLayoutAttribute">System.Runtime.InteropServices.StructLayoutAttribute</S>
+                    <S N="Name">SwitchParameter</S>
+                    <Nil N="DeclaringType" />
+                    <S N="Assembly">System.Management.Automation, Version=7.3.6.500, Culture=neutral, PublicKeyToken=31bf3856ad364e35</S>
+                    <S N="BaseType">System.ValueType</S>
+                    <B N="IsByRefLike">false</B>
+                    <B N="IsConstructedGenericType">false</B>
+                    <B N="IsGenericType">false</B>
+                    <B N="IsGenericTypeDefinition">false</B>
+                    <B N="IsGenericParameter">false</B>
+                    <B N="IsTypeDefinition">true</B>
+                    <B N="IsSecurityCritical">true</B>
+                    <B N="IsSecuritySafeCritical">false</B>
+                    <B N="IsSecurityTransparent">false</B>
+                    <S N="MemberType">TypeInfo</S>
+                    <I32 N="MetadataToken">33555203</I32>
+                    <S N="Module">System.Management.Automation.dll</S>
+                    <Nil N="ReflectedType" />
+                    <S N="TypeHandle">System.RuntimeTypeHandle</S>
+                    <Ref N="UnderlyingSystemType" RefId="31" />
+                    <Ref N="GenericTypeParameters" RefId="5" />
+                    <Obj N="DeclaredConstructors" RefId="32">
+                      <TNRef RefId="5" />
+                      <LST>
+                        <S>Void .ctor(Boolean)</S>
+                      </LST>
+                    </Obj>
+                    <Ref N="DeclaredEvents" RefId="7" />
+                    <Obj N="DeclaredFields" RefId="33">
+                      <TNRef RefId="7" />
+                      <LST>
+                        <S>Boolean _isPresent</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMembers" RefId="34">
+                      <TNRef RefId="8" />
+                      <LST>
+                        <S>Boolean get_IsPresent()</S>
+                        <S>Boolean op_Implicit(System.Management.Automation.SwitchParameter)</S>
+                        <S>System.Management.Automation.SwitchParameter op_Implicit(Boolean)</S>
+                        <S>Boolean ToBool()</S>
+                        <S>System.Management.Automation.SwitchParameter get_Present()</S>
+                        <S>Boolean Equals(System.Object)</S>
+                        <S>Int32 GetHashCode()</S>
+                        <S>Boolean op_Equality(System.Management.Automation.SwitchParameter, System.Management.Automation.SwitchParameter)</S>
+                        <S>Boolean op_Inequality(System.Management.Automation.SwitchParameter, System.Management.Automation.SwitchParameter)</S>
+                        <S>Boolean op_Equality(System.Management.Automation.SwitchParameter, Boolean)</S>
+                        <S>Boolean op_Inequality(System.Management.Automation.SwitchParameter, Boolean)</S>
+                        <S>Boolean op_Equality(Boolean, System.Management.Automation.SwitchParameter)</S>
+                        <S>Boolean op_Inequality(Boolean, System.Management.Automation.SwitchParameter)</S>
+                        <S>System.String ToString()</S>
+                        <S>Void .ctor(Boolean)</S>
+                        <S>Boolean IsPresent</S>
+                        <S>System.Management.Automation.SwitchParameter Present</S>
+                        <S>Boolean _isPresent</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMethods" RefId="35">
+                      <TNRef RefId="9" />
+                      <LST>
+                        <S>Boolean get_IsPresent()</S>
+                        <S>Boolean op_Implicit(System.Management.Automation.SwitchParameter)</S>
+                        <S>System.Management.Automation.SwitchParameter op_Implicit(Boolean)</S>
+                        <S>Boolean ToBool()</S>
+                        <S>System.Management.Automation.SwitchParameter get_Present()</S>
+                        <S>Boolean Equals(System.Object)</S>
+                        <S>Int32 GetHashCode()</S>
+                        <S>Boolean op_Equality(System.Management.Automation.SwitchParameter, System.Management.Automation.SwitchParameter)</S>
+                        <S>Boolean op_Inequality(System.Management.Automation.SwitchParameter, System.Management.Automation.SwitchParameter)</S>
+                        <S>Boolean op_Equality(System.Management.Automation.SwitchParameter, Boolean)</S>
+                        <S>Boolean op_Inequality(System.Management.Automation.SwitchParameter, Boolean)</S>
+                        <S>Boolean op_Equality(Boolean, System.Management.Automation.SwitchParameter)</S>
+                        <S>Boolean op_Inequality(Boolean, System.Management.Automation.SwitchParameter)</S>
+                        <S>System.String ToString()</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredNestedTypes" RefId="36">
+                      <TNRef RefId="10" />
+                      <IE />
+                    </Obj>
+                    <Obj N="DeclaredProperties" RefId="37">
+                      <TNRef RefId="11" />
+                      <LST>
+                        <S>Boolean IsPresent</S>
+                        <S>System.Management.Automation.SwitchParameter Present</S>
+                      </LST>
+                    </Obj>
+                    <Ref N="ImplementedInterfaces" RefId="5" />
+                    <B N="IsInterface">false</B>
+                    <B N="IsNested">false</B>
+                    <B N="IsArray">false</B>
+                    <B N="IsByRef">false</B>
+                    <B N="IsPointer">false</B>
+                    <B N="IsGenericTypeParameter">false</B>
+                    <B N="IsGenericMethodParameter">false</B>
+                    <B N="IsVariableBoundArray">false</B>
+                    <B N="HasElementType">false</B>
+                    <Ref N="GenericTypeArguments" RefId="5" />
+                    <S N="Attributes">AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit</S>
+                    <B N="IsAbstract">false</B>
+                    <B N="IsImport">false</B>
+                    <B N="IsSealed">true</B>
+                    <B N="IsSpecialName">false</B>
+                    <B N="IsClass">false</B>
+                    <B N="IsNestedAssembly">false</B>
+                    <B N="IsNestedFamANDAssem">false</B>
+                    <B N="IsNestedFamily">false</B>
+                    <B N="IsNestedFamORAssem">false</B>
+                    <B N="IsNestedPrivate">false</B>
+                    <B N="IsNestedPublic">false</B>
+                    <B N="IsNotPublic">false</B>
+                    <B N="IsPublic">true</B>
+                    <B N="IsAutoLayout">false</B>
+                    <B N="IsExplicitLayout">false</B>
+                    <B N="IsLayoutSequential">true</B>
+                    <B N="IsAnsiClass">true</B>
+                    <B N="IsAutoClass">false</B>
+                    <B N="IsUnicodeClass">false</B>
+                    <B N="IsCOMObject">false</B>
+                    <B N="IsContextful">false</B>
+                    <B N="IsMarshalByRef">false</B>
+                    <B N="IsPrimitive">false</B>
+                    <B N="IsValueType">true</B>
+                    <B N="IsSignatureType">false</B>
+                    <Nil N="TypeInitializer" />
+                    <B N="IsSerializable">false</B>
+                    <B N="IsVisible">true</B>
+                    <Obj N="CustomAttributes" RefId="38">
+                      <TNRef RefId="12" />
+                      <LST>
+                        <S>[System.Runtime.CompilerServices.IsReadOnlyAttribute()]</S>
+                      </LST>
+                    </Obj>
+                  </Props>
+                </Obj>
+                <Obj N="Aliases" RefId="39">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>vb</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Debug</S>
+            <Obj N="Value" RefId="40">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Debug</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="41">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>db</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorAction</S>
+            <Obj N="Value" RefId="42">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorAction</S>
+                <Obj N="ParameterType" RefId="43">
+                  <TNRef RefId="3" />
+                  <ToString>System.Management.Automation.ActionPreference</ToString>
+                  <Props>
+                    <B N="IsCollectible">false</B>
+                    <S N="FullName">System.Management.Automation.ActionPreference</S>
+                    <S N="AssemblyQualifiedName">System.Management.Automation.ActionPreference, System.Management.Automation, Version=7.3.6.500, Culture=neutral, PublicKeyToken=31bf3856ad364e35</S>
+                    <S N="Namespace">System.Management.Automation</S>
+                    <G N="GUID">0527afbd-2cca-3493-a54e-8316a7a86969</G>
+                    <B N="IsEnum">true</B>
+                    <B N="IsSZArray">false</B>
+                    <B N="ContainsGenericParameters">false</B>
+                    <S N="StructLayoutAttribute">System.Runtime.InteropServices.StructLayoutAttribute</S>
+                    <S N="Name">ActionPreference</S>
+                    <Nil N="DeclaringType" />
+                    <S N="Assembly">System.Management.Automation, Version=7.3.6.500, Culture=neutral, PublicKeyToken=31bf3856ad364e35</S>
+                    <S N="BaseType">System.Enum</S>
+                    <B N="IsByRefLike">false</B>
+                    <B N="IsConstructedGenericType">false</B>
+                    <B N="IsGenericType">false</B>
+                    <B N="IsGenericTypeDefinition">false</B>
+                    <B N="IsGenericParameter">false</B>
+                    <B N="IsTypeDefinition">true</B>
+                    <B N="IsSecurityCritical">true</B>
+                    <B N="IsSecuritySafeCritical">false</B>
+                    <B N="IsSecurityTransparent">false</B>
+                    <S N="MemberType">TypeInfo</S>
+                    <I32 N="MetadataToken">33554967</I32>
+                    <S N="Module">System.Management.Automation.dll</S>
+                    <Nil N="ReflectedType" />
+                    <S N="TypeHandle">System.RuntimeTypeHandle</S>
+                    <Ref N="UnderlyingSystemType" RefId="43" />
+                    <Ref N="GenericTypeParameters" RefId="5" />
+                    <Obj N="DeclaredConstructors" RefId="44">
+                      <TNRef RefId="5" />
+                      <LST />
+                    </Obj>
+                    <Ref N="DeclaredEvents" RefId="7" />
+                    <Obj N="DeclaredFields" RefId="45">
+                      <TNRef RefId="7" />
+                      <LST>
+                        <S>Int32 value__</S>
+                        <S>System.Management.Automation.ActionPreference SilentlyContinue</S>
+                        <S>System.Management.Automation.ActionPreference Stop</S>
+                        <S>System.Management.Automation.ActionPreference Continue</S>
+                        <S>System.Management.Automation.ActionPreference Inquire</S>
+                        <S>System.Management.Automation.ActionPreference Ignore</S>
+                        <S>System.Management.Automation.ActionPreference Suspend</S>
+                        <S>System.Management.Automation.ActionPreference Break</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMembers" RefId="46">
+                      <TNRef RefId="8" />
+                      <LST>
+                        <S>Int32 value__</S>
+                        <S>System.Management.Automation.ActionPreference SilentlyContinue</S>
+                        <S>System.Management.Automation.ActionPreference Stop</S>
+                        <S>System.Management.Automation.ActionPreference Continue</S>
+                        <S>System.Management.Automation.ActionPreference Inquire</S>
+                        <S>System.Management.Automation.ActionPreference Ignore</S>
+                        <S>System.Management.Automation.ActionPreference Suspend</S>
+                        <S>System.Management.Automation.ActionPreference Break</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMethods" RefId="47">
+                      <TNRef RefId="9" />
+                      <LST />
+                    </Obj>
+                    <Obj N="DeclaredNestedTypes" RefId="48">
+                      <TNRef RefId="10" />
+                      <IE />
+                    </Obj>
+                    <Obj N="DeclaredProperties" RefId="49">
+                      <TNRef RefId="11" />
+                      <LST />
+                    </Obj>
+                    <Obj N="ImplementedInterfaces" RefId="50">
+                      <TNRef RefId="4" />
+                      <LST>
+                        <S>System.IComparable</S>
+                        <S>System.IFormattable</S>
+                        <S>System.IConvertible</S>
+                      </LST>
+                    </Obj>
+                    <B N="IsInterface">false</B>
+                    <B N="IsNested">false</B>
+                    <B N="IsArray">false</B>
+                    <B N="IsByRef">false</B>
+                    <B N="IsPointer">false</B>
+                    <B N="IsGenericTypeParameter">false</B>
+                    <B N="IsGenericMethodParameter">false</B>
+                    <B N="IsVariableBoundArray">false</B>
+                    <B N="HasElementType">false</B>
+                    <Ref N="GenericTypeArguments" RefId="5" />
+                    <S N="Attributes">AutoLayout, AnsiClass, Class, Public, Sealed</S>
+                    <B N="IsAbstract">false</B>
+                    <B N="IsImport">false</B>
+                    <B N="IsSealed">true</B>
+                    <B N="IsSpecialName">false</B>
+                    <B N="IsClass">false</B>
+                    <B N="IsNestedAssembly">false</B>
+                    <B N="IsNestedFamANDAssem">false</B>
+                    <B N="IsNestedFamily">false</B>
+                    <B N="IsNestedFamORAssem">false</B>
+                    <B N="IsNestedPrivate">false</B>
+                    <B N="IsNestedPublic">false</B>
+                    <B N="IsNotPublic">false</B>
+                    <B N="IsPublic">true</B>
+                    <B N="IsAutoLayout">true</B>
+                    <B N="IsExplicitLayout">false</B>
+                    <B N="IsLayoutSequential">false</B>
+                    <B N="IsAnsiClass">true</B>
+                    <B N="IsAutoClass">false</B>
+                    <B N="IsUnicodeClass">false</B>
+                    <B N="IsCOMObject">false</B>
+                    <B N="IsContextful">false</B>
+                    <B N="IsMarshalByRef">false</B>
+                    <B N="IsPrimitive">false</B>
+                    <B N="IsValueType">true</B>
+                    <B N="IsSignatureType">false</B>
+                    <Nil N="TypeInitializer" />
+                    <B N="IsSerializable">true</B>
+                    <B N="IsVisible">true</B>
+                    <Obj N="CustomAttributes" RefId="51">
+                      <TN RefId="14">
+                        <T>System.Reflection.CustomAttributeData[]</T>
+                        <T>System.Array</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST />
+                    </Obj>
+                  </Props>
+                </Obj>
+                <Obj N="Aliases" RefId="52">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ea</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningAction</S>
+            <Obj N="Value" RefId="53">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="54">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationAction</S>
+            <Obj N="Value" RefId="55">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="56">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>infa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorVariable</S>
+            <Obj N="Value" RefId="57">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="58">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ev</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningVariable</S>
+            <Obj N="Value" RefId="59">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="60">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationVariable</S>
+            <Obj N="Value" RefId="61">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="62">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>iv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutVariable</S>
+            <Obj N="Value" RefId="63">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="64">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ov</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutBuffer</S>
+            <Obj N="Value" RefId="65">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutBuffer</S>
+                <Obj N="ParameterType" RefId="66">
+                  <TNRef RefId="3" />
+                  <ToString>System.Int32</ToString>
+                  <Props>
+                    <B N="IsCollectible">false</B>
+                    <S N="FullName">System.Int32</S>
+                    <S N="AssemblyQualifiedName">System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e</S>
+                    <S N="Namespace">System</S>
+                    <G N="GUID">2d5d8d9b-387f-3427-a66a-60f04c402a68</G>
+                    <B N="IsEnum">false</B>
+                    <B N="IsSZArray">false</B>
+                    <B N="ContainsGenericParameters">false</B>
+                    <S N="StructLayoutAttribute">System.Runtime.InteropServices.StructLayoutAttribute</S>
+                    <S N="Name">Int32</S>
+                    <Nil N="DeclaringType" />
+                    <S N="Assembly">System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e</S>
+                    <S N="BaseType">System.ValueType</S>
+                    <B N="IsByRefLike">false</B>
+                    <B N="IsConstructedGenericType">false</B>
+                    <B N="IsGenericType">false</B>
+                    <B N="IsGenericTypeDefinition">false</B>
+                    <B N="IsGenericParameter">false</B>
+                    <B N="IsTypeDefinition">true</B>
+                    <B N="IsSecurityCritical">true</B>
+                    <B N="IsSecuritySafeCritical">false</B>
+                    <B N="IsSecurityTransparent">false</B>
+                    <S N="MemberType">TypeInfo</S>
+                    <I32 N="MetadataToken">33554770</I32>
+                    <S N="Module">System.Private.CoreLib.dll</S>
+                    <Nil N="ReflectedType" />
+                    <S N="TypeHandle">System.RuntimeTypeHandle</S>
+                    <Ref N="UnderlyingSystemType" RefId="66" />
+                    <Ref N="GenericTypeParameters" RefId="5" />
+                    <Ref N="DeclaredConstructors" RefId="44" />
+                    <Ref N="DeclaredEvents" RefId="7" />
+                    <Obj N="DeclaredFields" RefId="67">
+                      <TNRef RefId="7" />
+                      <LST>
+                        <S>Int32 m_value</S>
+                        <S>Int32 MaxValue</S>
+                        <S>Int32 MinValue</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMembers" RefId="68">
+                      <TNRef RefId="8" />
+                      <LST>
+                        <S>Int32 CompareTo(System.Object)</S>
+                        <S>Int32 CompareTo(Int32)</S>
+                        <S>Boolean Equals(System.Object)</S>
+                        <S>Boolean Equals(Int32)</S>
+                        <S>Int32 GetHashCode()</S>
+                        <S>System.String ToString()</S>
+                        <S>System.String ToString(System.String)</S>
+                        <S>System.String ToString(System.IFormatProvider)</S>
+                        <S>System.String ToString(System.String, System.IFormatProvider)</S>
+                        <S>Boolean TryFormat(System.Span`1[System.Char], Int32 ByRef, System.ReadOnlySpan`1[System.Char], System.IFormatProvider)</S>
+                        <S>Int32 Parse(System.String)</S>
+                        <S>Int32 Parse(System.String, System.Globalization.NumberStyles)</S>
+                        <S>Int32 Parse(System.String, System.IFormatProvider)</S>
+                        <S>Int32 Parse(System.String, System.Globalization.NumberStyles, System.IFormatProvider)</S>
+                        <S>Int32 Parse(System.ReadOnlySpan`1[System.Char], System.Globalization.NumberStyles, System.IFormatProvider)</S>
+                        <S>Boolean TryParse(System.String, Int32 ByRef)</S>
+                        <S>Boolean TryParse(System.ReadOnlySpan`1[System.Char], Int32 ByRef)</S>
+                        <S>Boolean TryParse(System.String, System.Globalization.NumberStyles, System.IFormatProvider, Int32 ByRef)</S>
+                        <S>Boolean TryParse(System.ReadOnlySpan`1[System.Char], System.Globalization.NumberStyles, System.IFormatProvider, Int32 ByRef)</S>
+                        <S>System.TypeCode GetTypeCode()</S>
+                        <S>Boolean System.IConvertible.ToBoolean(System.IFormatProvider)</S>
+                        <S>Char System.IConvertible.ToChar(System.IFormatProvider)</S>
+                        <S>SByte System.IConvertible.ToSByte(System.IFormatProvider)</S>
+                        <S>Byte System.IConvertible.ToByte(System.IFormatProvider)</S>
+                        <S>Int16 System.IConvertible.ToInt16(System.IFormatProvider)</S>
+                        <S>UInt16 System.IConvertible.ToUInt16(System.IFormatProvider)</S>
+                        <S>Int32 System.IConvertible.ToInt32(System.IFormatProvider)</S>
+                        <S>UInt32 System.IConvertible.ToUInt32(System.IFormatProvider)</S>
+                        <S>Int64 System.IConvertible.ToInt64(System.IFormatProvider)</S>
+                        <S>UInt64 System.IConvertible.ToUInt64(System.IFormatProvider)</S>
+                        <S>Single System.IConvertible.ToSingle(System.IFormatProvider)</S>
+                        <S>Double System.IConvertible.ToDouble(System.IFormatProvider)</S>
+                        <S>System.Decimal System.IConvertible.ToDecimal(System.IFormatProvider)</S>
+                        <S>System.DateTime System.IConvertible.ToDateTime(System.IFormatProvider)</S>
+                        <S>System.Object System.IConvertible.ToType(System.Type, System.IFormatProvider)</S>
+                        <S>Int32 System.Numerics.IAdditionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Addition(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IAdditionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_CheckedAddition(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IAdditiveIdentity&lt;System.Int32,System.Int32&gt;.get_AdditiveIdentity()</S>
+                        <S>System.ValueTuple`2[System.Int32,System.Int32] DivRem(Int32, Int32)</S>
+                        <S>Int32 LeadingZeroCount(Int32)</S>
+                        <S>Int32 PopCount(Int32)</S>
+                        <S>Int32 RotateLeft(Int32, Int32)</S>
+                        <S>Int32 RotateRight(Int32, Int32)</S>
+                        <S>Int32 TrailingZeroCount(Int32)</S>
+                        <S>Boolean System.Numerics.IBinaryInteger&lt;System.Int32&gt;.TryReadBigEndian(System.ReadOnlySpan`1[System.Byte], Boolean, Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.IBinaryInteger&lt;System.Int32&gt;.TryReadLittleEndian(System.ReadOnlySpan`1[System.Byte], Boolean, Int32 ByRef)</S>
+                        <S>Int32 System.Numerics.IBinaryInteger&lt;System.Int32&gt;.GetShortestBitLength()</S>
+                        <S>Int32 System.Numerics.IBinaryInteger&lt;System.Int32&gt;.GetByteCount()</S>
+                        <S>Boolean System.Numerics.IBinaryInteger&lt;System.Int32&gt;.TryWriteBigEndian(System.Span`1[System.Byte], Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.IBinaryInteger&lt;System.Int32&gt;.TryWriteLittleEndian(System.Span`1[System.Byte], Int32 ByRef)</S>
+                        <S>Int32 System.Numerics.IBinaryNumber&lt;System.Int32&gt;.get_AllBitsSet()</S>
+                        <S>Boolean IsPow2(Int32)</S>
+                        <S>Int32 Log2(Int32)</S>
+                        <S>Int32 System.Numerics.IBitwiseOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_BitwiseAnd(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IBitwiseOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_BitwiseOr(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IBitwiseOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_ExclusiveOr(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IBitwiseOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_OnesComplement(Int32)</S>
+                        <S>Boolean System.Numerics.IComparisonOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_LessThan(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IComparisonOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_LessThanOrEqual(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IComparisonOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_GreaterThan(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IComparisonOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_GreaterThanOrEqual(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IDecrementOperators&lt;System.Int32&gt;.op_Decrement(Int32)</S>
+                        <S>Int32 System.Numerics.IDecrementOperators&lt;System.Int32&gt;.op_CheckedDecrement(Int32)</S>
+                        <S>Int32 System.Numerics.IDivisionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Division(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IEqualityOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_Equality(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IEqualityOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_Inequality(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IIncrementOperators&lt;System.Int32&gt;.op_Increment(Int32)</S>
+                        <S>Int32 System.Numerics.IIncrementOperators&lt;System.Int32&gt;.op_CheckedIncrement(Int32)</S>
+                        <S>Int32 System.Numerics.IMinMaxValue&lt;System.Int32&gt;.get_MinValue()</S>
+                        <S>Int32 System.Numerics.IMinMaxValue&lt;System.Int32&gt;.get_MaxValue()</S>
+                        <S>Int32 System.Numerics.IModulusOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Modulus(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IMultiplicativeIdentity&lt;System.Int32,System.Int32&gt;.get_MultiplicativeIdentity()</S>
+                        <S>Int32 System.Numerics.IMultiplyOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Multiply(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IMultiplyOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_CheckedMultiply(Int32, Int32)</S>
+                        <S>Int32 Clamp(Int32, Int32, Int32)</S>
+                        <S>Int32 CopySign(Int32, Int32)</S>
+                        <S>Int32 Max(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.INumber&lt;System.Int32&gt;.MaxNumber(Int32, Int32)</S>
+                        <S>Int32 Min(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.INumber&lt;System.Int32&gt;.MinNumber(Int32, Int32)</S>
+                        <S>Int32 Sign(Int32)</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.get_One()</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.get_Radix()</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.get_Zero()</S>
+                        <S>Int32 Abs(Int32)</S>
+                        <S>Int32 CreateChecked[TOther](TOther)</S>
+                        <S>Int32 CreateSaturating[TOther](TOther)</S>
+                        <S>Int32 CreateTruncating[TOther](TOther)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsCanonical(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsComplexNumber(Int32)</S>
+                        <S>Boolean IsEvenInteger(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsFinite(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsImaginaryNumber(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsInfinity(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsInteger(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsNaN(Int32)</S>
+                        <S>Boolean IsNegative(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsNegativeInfinity(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsNormal(Int32)</S>
+                        <S>Boolean IsOddInteger(Int32)</S>
+                        <S>Boolean IsPositive(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsPositiveInfinity(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsRealNumber(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsSubnormal(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsZero(Int32)</S>
+                        <S>Int32 MaxMagnitude(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.MaxMagnitudeNumber(Int32, Int32)</S>
+                        <S>Int32 MinMagnitude(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.MinMagnitudeNumber(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertFromChecked[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean TryConvertFromChecked[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertFromSaturating[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean TryConvertFromSaturating[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertFromTruncating[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean TryConvertFromTruncating[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertToChecked[TOther](Int32, TOther ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertToSaturating[TOther](Int32, TOther ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertToTruncating[TOther](Int32, TOther ByRef)</S>
+                        <S>Boolean TryParse(System.String, System.IFormatProvider, Int32 ByRef)</S>
+                        <S>Int32 System.Numerics.IShiftOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_LeftShift(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IShiftOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_RightShift(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IShiftOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_UnsignedRightShift(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.ISignedNumber&lt;System.Int32&gt;.get_NegativeOne()</S>
+                        <S>Int32 Parse(System.ReadOnlySpan`1[System.Char], System.IFormatProvider)</S>
+                        <S>Boolean TryParse(System.ReadOnlySpan`1[System.Char], System.IFormatProvider, Int32 ByRef)</S>
+                        <S>Int32 System.Numerics.ISubtractionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Subtraction(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.ISubtractionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_CheckedSubtraction(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IUnaryNegationOperators&lt;System.Int32,System.Int32&gt;.op_UnaryNegation(Int32)</S>
+                        <S>Int32 System.Numerics.IUnaryNegationOperators&lt;System.Int32,System.Int32&gt;.op_CheckedUnaryNegation(Int32)</S>
+                        <S>Int32 System.Numerics.IUnaryPlusOperators&lt;System.Int32,System.Int32&gt;.op_UnaryPlus(Int32)</S>
+                        <S>Int32 System.Numerics.IAdditiveIdentity&lt;System.Int32,System.Int32&gt;.AdditiveIdentity</S>
+                        <S>Int32 System.Numerics.IBinaryNumber&lt;System.Int32&gt;.AllBitsSet</S>
+                        <S>Int32 System.Numerics.IMinMaxValue&lt;System.Int32&gt;.MinValue</S>
+                        <S>Int32 System.Numerics.IMinMaxValue&lt;System.Int32&gt;.MaxValue</S>
+                        <S>Int32 System.Numerics.IMultiplicativeIdentity&lt;System.Int32,System.Int32&gt;.MultiplicativeIdentity</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.One</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.Radix</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.Zero</S>
+                        <S>Int32 System.Numerics.ISignedNumber&lt;System.Int32&gt;.NegativeOne</S>
+                        <S>Int32 m_value</S>
+                        <S>Int32 MaxValue</S>
+                        <S>Int32 MinValue</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredMethods" RefId="69">
+                      <TNRef RefId="9" />
+                      <LST>
+                        <S>Int32 CompareTo(System.Object)</S>
+                        <S>Int32 CompareTo(Int32)</S>
+                        <S>Boolean Equals(System.Object)</S>
+                        <S>Boolean Equals(Int32)</S>
+                        <S>Int32 GetHashCode()</S>
+                        <S>System.String ToString()</S>
+                        <S>System.String ToString(System.String)</S>
+                        <S>System.String ToString(System.IFormatProvider)</S>
+                        <S>System.String ToString(System.String, System.IFormatProvider)</S>
+                        <S>Boolean TryFormat(System.Span`1[System.Char], Int32 ByRef, System.ReadOnlySpan`1[System.Char], System.IFormatProvider)</S>
+                        <S>Int32 Parse(System.String)</S>
+                        <S>Int32 Parse(System.String, System.Globalization.NumberStyles)</S>
+                        <S>Int32 Parse(System.String, System.IFormatProvider)</S>
+                        <S>Int32 Parse(System.String, System.Globalization.NumberStyles, System.IFormatProvider)</S>
+                        <S>Int32 Parse(System.ReadOnlySpan`1[System.Char], System.Globalization.NumberStyles, System.IFormatProvider)</S>
+                        <S>Boolean TryParse(System.String, Int32 ByRef)</S>
+                        <S>Boolean TryParse(System.ReadOnlySpan`1[System.Char], Int32 ByRef)</S>
+                        <S>Boolean TryParse(System.String, System.Globalization.NumberStyles, System.IFormatProvider, Int32 ByRef)</S>
+                        <S>Boolean TryParse(System.ReadOnlySpan`1[System.Char], System.Globalization.NumberStyles, System.IFormatProvider, Int32 ByRef)</S>
+                        <S>System.TypeCode GetTypeCode()</S>
+                        <S>Boolean System.IConvertible.ToBoolean(System.IFormatProvider)</S>
+                        <S>Char System.IConvertible.ToChar(System.IFormatProvider)</S>
+                        <S>SByte System.IConvertible.ToSByte(System.IFormatProvider)</S>
+                        <S>Byte System.IConvertible.ToByte(System.IFormatProvider)</S>
+                        <S>Int16 System.IConvertible.ToInt16(System.IFormatProvider)</S>
+                        <S>UInt16 System.IConvertible.ToUInt16(System.IFormatProvider)</S>
+                        <S>Int32 System.IConvertible.ToInt32(System.IFormatProvider)</S>
+                        <S>UInt32 System.IConvertible.ToUInt32(System.IFormatProvider)</S>
+                        <S>Int64 System.IConvertible.ToInt64(System.IFormatProvider)</S>
+                        <S>UInt64 System.IConvertible.ToUInt64(System.IFormatProvider)</S>
+                        <S>Single System.IConvertible.ToSingle(System.IFormatProvider)</S>
+                        <S>Double System.IConvertible.ToDouble(System.IFormatProvider)</S>
+                        <S>System.Decimal System.IConvertible.ToDecimal(System.IFormatProvider)</S>
+                        <S>System.DateTime System.IConvertible.ToDateTime(System.IFormatProvider)</S>
+                        <S>System.Object System.IConvertible.ToType(System.Type, System.IFormatProvider)</S>
+                        <S>Int32 System.Numerics.IAdditionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Addition(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IAdditionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_CheckedAddition(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IAdditiveIdentity&lt;System.Int32,System.Int32&gt;.get_AdditiveIdentity()</S>
+                        <S>System.ValueTuple`2[System.Int32,System.Int32] DivRem(Int32, Int32)</S>
+                        <S>Int32 LeadingZeroCount(Int32)</S>
+                        <S>Int32 PopCount(Int32)</S>
+                        <S>Int32 RotateLeft(Int32, Int32)</S>
+                        <S>Int32 RotateRight(Int32, Int32)</S>
+                        <S>Int32 TrailingZeroCount(Int32)</S>
+                        <S>Boolean System.Numerics.IBinaryInteger&lt;System.Int32&gt;.TryReadBigEndian(System.ReadOnlySpan`1[System.Byte], Boolean, Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.IBinaryInteger&lt;System.Int32&gt;.TryReadLittleEndian(System.ReadOnlySpan`1[System.Byte], Boolean, Int32 ByRef)</S>
+                        <S>Int32 System.Numerics.IBinaryInteger&lt;System.Int32&gt;.GetShortestBitLength()</S>
+                        <S>Int32 System.Numerics.IBinaryInteger&lt;System.Int32&gt;.GetByteCount()</S>
+                        <S>Boolean System.Numerics.IBinaryInteger&lt;System.Int32&gt;.TryWriteBigEndian(System.Span`1[System.Byte], Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.IBinaryInteger&lt;System.Int32&gt;.TryWriteLittleEndian(System.Span`1[System.Byte], Int32 ByRef)</S>
+                        <S>Int32 System.Numerics.IBinaryNumber&lt;System.Int32&gt;.get_AllBitsSet()</S>
+                        <S>Boolean IsPow2(Int32)</S>
+                        <S>Int32 Log2(Int32)</S>
+                        <S>Int32 System.Numerics.IBitwiseOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_BitwiseAnd(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IBitwiseOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_BitwiseOr(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IBitwiseOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_ExclusiveOr(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IBitwiseOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_OnesComplement(Int32)</S>
+                        <S>Boolean System.Numerics.IComparisonOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_LessThan(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IComparisonOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_LessThanOrEqual(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IComparisonOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_GreaterThan(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IComparisonOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_GreaterThanOrEqual(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IDecrementOperators&lt;System.Int32&gt;.op_Decrement(Int32)</S>
+                        <S>Int32 System.Numerics.IDecrementOperators&lt;System.Int32&gt;.op_CheckedDecrement(Int32)</S>
+                        <S>Int32 System.Numerics.IDivisionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Division(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IEqualityOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_Equality(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.IEqualityOperators&lt;System.Int32,System.Int32,System.Boolean&gt;.op_Inequality(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IIncrementOperators&lt;System.Int32&gt;.op_Increment(Int32)</S>
+                        <S>Int32 System.Numerics.IIncrementOperators&lt;System.Int32&gt;.op_CheckedIncrement(Int32)</S>
+                        <S>Int32 System.Numerics.IMinMaxValue&lt;System.Int32&gt;.get_MinValue()</S>
+                        <S>Int32 System.Numerics.IMinMaxValue&lt;System.Int32&gt;.get_MaxValue()</S>
+                        <S>Int32 System.Numerics.IModulusOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Modulus(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IMultiplicativeIdentity&lt;System.Int32,System.Int32&gt;.get_MultiplicativeIdentity()</S>
+                        <S>Int32 System.Numerics.IMultiplyOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Multiply(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IMultiplyOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_CheckedMultiply(Int32, Int32)</S>
+                        <S>Int32 Clamp(Int32, Int32, Int32)</S>
+                        <S>Int32 CopySign(Int32, Int32)</S>
+                        <S>Int32 Max(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.INumber&lt;System.Int32&gt;.MaxNumber(Int32, Int32)</S>
+                        <S>Int32 Min(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.INumber&lt;System.Int32&gt;.MinNumber(Int32, Int32)</S>
+                        <S>Int32 Sign(Int32)</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.get_One()</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.get_Radix()</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.get_Zero()</S>
+                        <S>Int32 Abs(Int32)</S>
+                        <S>Int32 CreateChecked[TOther](TOther)</S>
+                        <S>Int32 CreateSaturating[TOther](TOther)</S>
+                        <S>Int32 CreateTruncating[TOther](TOther)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsCanonical(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsComplexNumber(Int32)</S>
+                        <S>Boolean IsEvenInteger(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsFinite(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsImaginaryNumber(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsInfinity(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsInteger(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsNaN(Int32)</S>
+                        <S>Boolean IsNegative(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsNegativeInfinity(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsNormal(Int32)</S>
+                        <S>Boolean IsOddInteger(Int32)</S>
+                        <S>Boolean IsPositive(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsPositiveInfinity(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsRealNumber(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsSubnormal(Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.IsZero(Int32)</S>
+                        <S>Int32 MaxMagnitude(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.MaxMagnitudeNumber(Int32, Int32)</S>
+                        <S>Int32 MinMagnitude(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.MinMagnitudeNumber(Int32, Int32)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertFromChecked[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean TryConvertFromChecked[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertFromSaturating[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean TryConvertFromSaturating[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertFromTruncating[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean TryConvertFromTruncating[TOther](TOther, Int32 ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertToChecked[TOther](Int32, TOther ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertToSaturating[TOther](Int32, TOther ByRef)</S>
+                        <S>Boolean System.Numerics.INumberBase&lt;System.Int32&gt;.TryConvertToTruncating[TOther](Int32, TOther ByRef)</S>
+                        <S>Boolean TryParse(System.String, System.IFormatProvider, Int32 ByRef)</S>
+                        <S>Int32 System.Numerics.IShiftOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_LeftShift(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IShiftOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_RightShift(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IShiftOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_UnsignedRightShift(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.ISignedNumber&lt;System.Int32&gt;.get_NegativeOne()</S>
+                        <S>Int32 Parse(System.ReadOnlySpan`1[System.Char], System.IFormatProvider)</S>
+                        <S>Boolean TryParse(System.ReadOnlySpan`1[System.Char], System.IFormatProvider, Int32 ByRef)</S>
+                        <S>Int32 System.Numerics.ISubtractionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_Subtraction(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.ISubtractionOperators&lt;System.Int32,System.Int32,System.Int32&gt;.op_CheckedSubtraction(Int32, Int32)</S>
+                        <S>Int32 System.Numerics.IUnaryNegationOperators&lt;System.Int32,System.Int32&gt;.op_UnaryNegation(Int32)</S>
+                        <S>Int32 System.Numerics.IUnaryNegationOperators&lt;System.Int32,System.Int32&gt;.op_CheckedUnaryNegation(Int32)</S>
+                        <S>Int32 System.Numerics.IUnaryPlusOperators&lt;System.Int32,System.Int32&gt;.op_UnaryPlus(Int32)</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="DeclaredNestedTypes" RefId="70">
+                      <TNRef RefId="10" />
+                      <IE />
+                    </Obj>
+                    <Obj N="DeclaredProperties" RefId="71">
+                      <TNRef RefId="11" />
+                      <LST>
+                        <S>Int32 System.Numerics.IAdditiveIdentity&lt;System.Int32,System.Int32&gt;.AdditiveIdentity</S>
+                        <S>Int32 System.Numerics.IBinaryNumber&lt;System.Int32&gt;.AllBitsSet</S>
+                        <S>Int32 System.Numerics.IMinMaxValue&lt;System.Int32&gt;.MinValue</S>
+                        <S>Int32 System.Numerics.IMinMaxValue&lt;System.Int32&gt;.MaxValue</S>
+                        <S>Int32 System.Numerics.IMultiplicativeIdentity&lt;System.Int32,System.Int32&gt;.MultiplicativeIdentity</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.One</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.Radix</S>
+                        <S>Int32 System.Numerics.INumberBase&lt;System.Int32&gt;.Zero</S>
+                        <S>Int32 System.Numerics.ISignedNumber&lt;System.Int32&gt;.NegativeOne</S>
+                      </LST>
+                    </Obj>
+                    <Obj N="ImplementedInterfaces" RefId="72">
+                      <TNRef RefId="4" />
+                      <LST>
+                        <S>System.IComparable</S>
+                        <S>System.IConvertible</S>
+                        <S>System.ISpanFormattable</S>
+                        <S>System.IFormattable</S>
+                        <S>System.IComparable`1[System.Int32]</S>
+                        <S>System.IEquatable`1[System.Int32]</S>
+                        <S>System.Numerics.IBinaryInteger`1[System.Int32]</S>
+                        <S>System.Numerics.IBinaryNumber`1[System.Int32]</S>
+                        <S>System.Numerics.IBitwiseOperators`3[System.Int32,System.Int32,System.Int32]</S>
+                        <S>System.Numerics.INumber`1[System.Int32]</S>
+                        <S>System.Numerics.IComparisonOperators`3[System.Int32,System.Int32,System.Boolean]</S>
+                        <S>System.Numerics.IEqualityOperators`3[System.Int32,System.Int32,System.Boolean]</S>
+                        <S>System.Numerics.IModulusOperators`3[System.Int32,System.Int32,System.Int32]</S>
+                        <S>System.Numerics.INumberBase`1[System.Int32]</S>
+                        <S>System.Numerics.IAdditionOperators`3[System.Int32,System.Int32,System.Int32]</S>
+                        <S>System.Numerics.IAdditiveIdentity`2[System.Int32,System.Int32]</S>
+                        <S>System.Numerics.IDecrementOperators`1[System.Int32]</S>
+                        <S>System.Numerics.IDivisionOperators`3[System.Int32,System.Int32,System.Int32]</S>
+                        <S>System.Numerics.IIncrementOperators`1[System.Int32]</S>
+                        <S>System.Numerics.IMultiplicativeIdentity`2[System.Int32,System.Int32]</S>
+                        <S>System.Numerics.IMultiplyOperators`3[System.Int32,System.Int32,System.Int32]</S>
+                        <S>System.ISpanParsable`1[System.Int32]</S>
+                        <S>System.IParsable`1[System.Int32]</S>
+                        <S>System.Numerics.ISubtractionOperators`3[System.Int32,System.Int32,System.Int32]</S>
+                        <S>System.Numerics.IUnaryPlusOperators`2[System.Int32,System.Int32]</S>
+                        <S>System.Numerics.IUnaryNegationOperators`2[System.Int32,System.Int32]</S>
+                        <S>System.Numerics.IShiftOperators`3[System.Int32,System.Int32,System.Int32]</S>
+                        <S>System.Numerics.IMinMaxValue`1[System.Int32]</S>
+                        <S>System.Numerics.ISignedNumber`1[System.Int32]</S>
+                      </LST>
+                    </Obj>
+                    <B N="IsInterface">false</B>
+                    <B N="IsNested">false</B>
+                    <B N="IsArray">false</B>
+                    <B N="IsByRef">false</B>
+                    <B N="IsPointer">false</B>
+                    <B N="IsGenericTypeParameter">false</B>
+                    <B N="IsGenericMethodParameter">false</B>
+                    <B N="IsVariableBoundArray">false</B>
+                    <B N="HasElementType">false</B>
+                    <Ref N="GenericTypeArguments" RefId="5" />
+                    <S N="Attributes">AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Serializable, BeforeFieldInit</S>
+                    <B N="IsAbstract">false</B>
+                    <B N="IsImport">false</B>
+                    <B N="IsSealed">true</B>
+                    <B N="IsSpecialName">false</B>
+                    <B N="IsClass">false</B>
+                    <B N="IsNestedAssembly">false</B>
+                    <B N="IsNestedFamANDAssem">false</B>
+                    <B N="IsNestedFamily">false</B>
+                    <B N="IsNestedFamORAssem">false</B>
+                    <B N="IsNestedPrivate">false</B>
+                    <B N="IsNestedPublic">false</B>
+                    <B N="IsNotPublic">false</B>
+                    <B N="IsPublic">true</B>
+                    <B N="IsAutoLayout">false</B>
+                    <B N="IsExplicitLayout">false</B>
+                    <B N="IsLayoutSequential">true</B>
+                    <B N="IsAnsiClass">true</B>
+                    <B N="IsAutoClass">false</B>
+                    <B N="IsUnicodeClass">false</B>
+                    <B N="IsCOMObject">false</B>
+                    <B N="IsContextful">false</B>
+                    <B N="IsMarshalByRef">false</B>
+                    <B N="IsPrimitive">true</B>
+                    <B N="IsValueType">true</B>
+                    <B N="IsSignatureType">false</B>
+                    <Nil N="TypeInitializer" />
+                    <B N="IsSerializable">true</B>
+                    <B N="IsVisible">true</B>
+                    <Obj N="CustomAttributes" RefId="73">
+                      <TNRef RefId="12" />
+                      <LST>
+                        <S>[System.SerializableAttribute()]</S>
+                        <S>[System.Runtime.CompilerServices.IsReadOnlyAttribute()]</S>
+                        <S>[System.Runtime.CompilerServices.TypeForwardedFromAttribute("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")]</S>
+                      </LST>
+                    </Obj>
+                  </Props>
+                </Obj>
+                <Obj N="Aliases" RefId="74">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ob</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">PipelineVariable</S>
+            <Obj N="Value" RefId="75">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PipelineVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="76">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>pv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+    </MS>
+  </Obj>
+  <Obj RefId="77">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Name">Get-MSCommercePolicies</S>
+      <Obj N="Parameters" RefId="78">
+        <TNRef RefId="1" />
+        <DCT>
+          <En>
+            <S N="Key">Verbose</S>
+            <Obj N="Value" RefId="79">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Verbose</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="80">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>vb</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Debug</S>
+            <Obj N="Value" RefId="81">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Debug</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="82">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>db</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorAction</S>
+            <Obj N="Value" RefId="83">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="84">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ea</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningAction</S>
+            <Obj N="Value" RefId="85">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="86">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationAction</S>
+            <Obj N="Value" RefId="87">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="88">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>infa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorVariable</S>
+            <Obj N="Value" RefId="89">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="90">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ev</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningVariable</S>
+            <Obj N="Value" RefId="91">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="92">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationVariable</S>
+            <Obj N="Value" RefId="93">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="94">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>iv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutVariable</S>
+            <Obj N="Value" RefId="95">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="96">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ov</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutBuffer</S>
+            <Obj N="Value" RefId="97">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutBuffer</S>
+                <Ref N="ParameterType" RefId="66" />
+                <Obj N="Aliases" RefId="98">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ob</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">PipelineVariable</S>
+            <Obj N="Value" RefId="99">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PipelineVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="100">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>pv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+    </MS>
+  </Obj>
+  <Obj RefId="101">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Name">Get-MSCommercePolicy</S>
+      <Obj N="Parameters" RefId="102">
+        <TNRef RefId="1" />
+        <DCT>
+          <En>
+            <S N="Key">PolicyId</S>
+            <Obj N="Value" RefId="103">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PolicyId</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="104">
+                  <TNRef RefId="13" />
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Verbose</S>
+            <Obj N="Value" RefId="105">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Verbose</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="106">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>vb</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Debug</S>
+            <Obj N="Value" RefId="107">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Debug</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="108">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>db</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorAction</S>
+            <Obj N="Value" RefId="109">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="110">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ea</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningAction</S>
+            <Obj N="Value" RefId="111">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="112">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationAction</S>
+            <Obj N="Value" RefId="113">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="114">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>infa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorVariable</S>
+            <Obj N="Value" RefId="115">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="116">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ev</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningVariable</S>
+            <Obj N="Value" RefId="117">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="118">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationVariable</S>
+            <Obj N="Value" RefId="119">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="120">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>iv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutVariable</S>
+            <Obj N="Value" RefId="121">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="122">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ov</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutBuffer</S>
+            <Obj N="Value" RefId="123">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutBuffer</S>
+                <Ref N="ParameterType" RefId="66" />
+                <Obj N="Aliases" RefId="124">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ob</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">PipelineVariable</S>
+            <Obj N="Value" RefId="125">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PipelineVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="126">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>pv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+    </MS>
+  </Obj>
+  <Obj RefId="127">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Name">Get-MSCommerceProductPolicies</S>
+      <Obj N="Parameters" RefId="128">
+        <TNRef RefId="1" />
+        <DCT>
+          <En>
+            <S N="Key">PolicyId</S>
+            <Obj N="Value" RefId="129">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PolicyId</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="130">
+                  <TNRef RefId="13" />
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Verbose</S>
+            <Obj N="Value" RefId="131">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Verbose</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="132">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>vb</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Debug</S>
+            <Obj N="Value" RefId="133">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Debug</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="134">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>db</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorAction</S>
+            <Obj N="Value" RefId="135">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="136">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ea</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningAction</S>
+            <Obj N="Value" RefId="137">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="138">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationAction</S>
+            <Obj N="Value" RefId="139">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="140">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>infa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorVariable</S>
+            <Obj N="Value" RefId="141">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="142">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ev</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningVariable</S>
+            <Obj N="Value" RefId="143">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="144">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationVariable</S>
+            <Obj N="Value" RefId="145">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="146">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>iv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutVariable</S>
+            <Obj N="Value" RefId="147">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="148">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ov</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutBuffer</S>
+            <Obj N="Value" RefId="149">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutBuffer</S>
+                <Ref N="ParameterType" RefId="66" />
+                <Obj N="Aliases" RefId="150">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ob</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">PipelineVariable</S>
+            <Obj N="Value" RefId="151">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PipelineVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="152">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>pv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+    </MS>
+  </Obj>
+  <Obj RefId="153">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Name">Get-MSCommerceProductPolicy</S>
+      <Obj N="Parameters" RefId="154">
+        <TNRef RefId="1" />
+        <DCT>
+          <En>
+            <S N="Key">PolicyId</S>
+            <Obj N="Value" RefId="155">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PolicyId</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="156">
+                  <TNRef RefId="13" />
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ProductId</S>
+            <Obj N="Value" RefId="157">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ProductId</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="158">
+                  <TNRef RefId="13" />
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Verbose</S>
+            <Obj N="Value" RefId="159">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Verbose</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="160">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>vb</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Debug</S>
+            <Obj N="Value" RefId="161">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Debug</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="162">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>db</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorAction</S>
+            <Obj N="Value" RefId="163">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="164">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ea</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningAction</S>
+            <Obj N="Value" RefId="165">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="166">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationAction</S>
+            <Obj N="Value" RefId="167">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="168">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>infa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorVariable</S>
+            <Obj N="Value" RefId="169">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="170">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ev</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningVariable</S>
+            <Obj N="Value" RefId="171">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="172">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationVariable</S>
+            <Obj N="Value" RefId="173">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="174">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>iv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutVariable</S>
+            <Obj N="Value" RefId="175">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="176">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ov</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutBuffer</S>
+            <Obj N="Value" RefId="177">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutBuffer</S>
+                <Ref N="ParameterType" RefId="66" />
+                <Obj N="Aliases" RefId="178">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ob</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">PipelineVariable</S>
+            <Obj N="Value" RefId="179">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PipelineVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="180">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>pv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+    </MS>
+  </Obj>
+  <Obj RefId="181">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Name">Update-MSCommerceProductPolicy</S>
+      <Obj N="Parameters" RefId="182">
+        <TNRef RefId="1" />
+        <DCT>
+          <En>
+            <S N="Key">PolicyId</S>
+            <Obj N="Value" RefId="183">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PolicyId</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="184">
+                  <TNRef RefId="13" />
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ProductId</S>
+            <Obj N="Value" RefId="185">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ProductId</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="186">
+                  <TNRef RefId="13" />
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Enabled</S>
+            <Obj N="Value" RefId="187">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Enabled</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="188">
+                  <TNRef RefId="13" />
+                  <LST />
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Verbose</S>
+            <Obj N="Value" RefId="189">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Verbose</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="190">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>vb</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Debug</S>
+            <Obj N="Value" RefId="191">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Debug</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="192">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>db</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorAction</S>
+            <Obj N="Value" RefId="193">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="194">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ea</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningAction</S>
+            <Obj N="Value" RefId="195">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="196">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationAction</S>
+            <Obj N="Value" RefId="197">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationAction</S>
+                <Ref N="ParameterType" RefId="43" />
+                <Obj N="Aliases" RefId="198">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>infa</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">ErrorVariable</S>
+            <Obj N="Value" RefId="199">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">ErrorVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="200">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ev</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WarningVariable</S>
+            <Obj N="Value" RefId="201">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WarningVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="202">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">InformationVariable</S>
+            <Obj N="Value" RefId="203">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">InformationVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="204">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>iv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutVariable</S>
+            <Obj N="Value" RefId="205">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="206">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ov</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">OutBuffer</S>
+            <Obj N="Value" RefId="207">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">OutBuffer</S>
+                <Ref N="ParameterType" RefId="66" />
+                <Obj N="Aliases" RefId="208">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>ob</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">PipelineVariable</S>
+            <Obj N="Value" RefId="209">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">PipelineVariable</S>
+                <Ref N="ParameterType" RefId="3" />
+                <Obj N="Aliases" RefId="210">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>pv</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">false</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">WhatIf</S>
+            <Obj N="Value" RefId="211">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">WhatIf</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="212">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>wi</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Confirm</S>
+            <Obj N="Value" RefId="213">
+              <TNRef RefId="2" />
+              <ToString>System.Management.Automation.ParameterMetadata</ToString>
+              <Props>
+                <S N="Name">Confirm</S>
+                <Ref N="ParameterType" RefId="31" />
+                <Obj N="Aliases" RefId="214">
+                  <TNRef RefId="13" />
+                  <LST>
+                    <S>cf</S>
+                  </LST>
+                </Obj>
+                <B N="IsDynamic">false</B>
+                <B N="SwitchParameter">true</B>
+              </Props>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+    </MS>
+  </Obj>
+</Objs>
