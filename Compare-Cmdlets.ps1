@@ -11,7 +11,7 @@
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-    Version 1.15, September 14th, 2022
+    Version 1.16, June 11th, 2025
 
     .DESCRIPTION
     Script to compare cmdlets available through Exchange Online or Azure Active Directory.
@@ -28,11 +28,9 @@
     as parameters. This mode is used when specifying ReferenceCmds/DifferenceCmds.
 
     The export files are stored in the current folder and follow this naming convention:
-    - ExchangeOnline-<Exchange Online build>.xml
     - ExchangeOnlineManagement-<Exchange Online build>.xml
-    - AzureAD-<Azure Active Directory Module version>.xml
     - MicrosoftTeams-<MicrosoftTeams Module version>.xml
-    - MSOnline-<MSOnline Module version>.xml
+    - etc.
 
     .LINK
     http://eightwone.com
@@ -59,7 +57,10 @@
     1.13    Added MSCommerce
     1.14    Added MSGraph
     1.15    Added code to export EXO Preview info with Preview tags
-
+    1.16    Added Graph, Graph.Beta
+            Removed AzureAD, MSOnline
+            
+            
     .PARAMETER ReferenceCmds
     Specifies the file containing the cmdlet reference set.
 
@@ -247,40 +248,6 @@ Else {
         Write-Warning 'Exchange cmdlets not available, skipping'
     }
 
-    If ( Get-Command Get-AzureADUser -ErrorAction SilentlyContinue) {
-        $Module = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Source
-        $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
-        $Version = (Get-Command Get-AzureADUser -ErrorAction SilentlyContinue ).Version
-        $File = Join-Path $DataFolder ('AzureAD-{0}.xml' -f $Version)
-	If( -not( Test-Path -Path $File)) {
-        	Write-Output ('Storing Azure AD cmdlets in {0}' -f $File)
-        	$Cmdlets | Export-CliXml -Path $File
-	}
-	Else {
-		Write-Warning ('File {0} already exists' -f $File)
-	}
-    }
-    Else {
-        Write-Warning 'Azure AD cmdlets not available, skipping'
-    }
-
-    If ( Get-Command Get-MsolUser -ErrorAction SilentlyContinue) {
-        $Module = (Get-Command Get-MsolUser -ErrorAction SilentlyContinue ).Source
-        $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
-        $Version = (Get-Command Get-MSolUser -ErrorAction SilentlyContinue ).Version
-        $File = Join-Path $DataFolder ('MSOnline-{0}.xml' -f $Version)
-	If( -not( Test-Path -Path $File)) {
-        	Write-Output ('Storing MSOnline cmdlets in {0}' -f $File)
-        	$Cmdlets | Export-CliXml -Path $File
-	}
-	Else {
-		Write-Warning ('File {0} already exists' -f $File)
-	}
-    }
-    Else {
-        Write-Warning 'Azure AD cmdlets not available, skipping'
-    }
-
     If ( Get-Command Get-Team -ErrorAction SilentlyContinue) {
         $Module = (Get-Command Get-Team -ErrorAction SilentlyContinue ).Source
         $Cmdlets = Get-Command -Module $Module | Select-Object Name, Parameters
@@ -332,14 +299,14 @@ Else {
         Write-Warning 'MSCommerce not available, skipping'
     }
 
-    # Connect-MgGraph -Scopes "User.ReadWrite.All, UserAuthenticationMethod.ReadWrite.All, Directory.ReadWrite.All"
+    # Connect-MgGraph -Scopes "User.ReadWrite.All, Directory.ReadWrite.All"
     If ( Get-Command Get-MgUser -ErrorAction SilentlyContinue) {
         $Modules= Get-Module -Name Microsoft.Graph.User -ListAvailable
         If( $Modules) {
             $Version = (Get-Command -Name Get-MgUser).Version
-            $File = Join-Path $DataFolder ('MsGraph.User-{0}.xml' -f $Version)
+            $File = Join-Path $DataFolder ('Microsoft.Graph.User-{0}.xml' -f $Version)
             If( -not( Test-Path -Path $File)) {
-                Write-Output ('Storing MsGraph.User cmdlets in {0}' -f $File)
+                Write-Output ('Storing Microsoft.Graph.User cmdlets in {0}' -f $File)
                 $Modules | ForEach-Object { Get-Command -Module $_.Name } | Select-Object Name, Parameters | Export-CliXml -Path $File
             }
             Else {
@@ -348,7 +315,26 @@ Else {
         }
     }
     Else {
-        Write-Warning 'MSGraph not available, skipping'
+        Write-Warning 'Microsoft.Graph.User not available, skipping'
+    }
+
+    # Connect-MgBetaGraph -Scopes "User.ReadWrite.All, Directory.ReadWrite.All"
+    If ( Get-Command Get-MgBetaUser -ErrorAction SilentlyContinue) {
+        $Modules= Get-Module -Name Microsoft.Graph.Beta.User -ListAvailable
+        If( $Modules) {
+            $Version = (Get-Command -Name Get-MgBetaUser).Version
+            $File = Join-Path $DataFolder ('MsBetaGraph.User-{0}.xml' -f $Version)
+            If( -not( Test-Path -Path $File)) {
+                Write-Output ('Storing Microsoft.Graph.Beta.User cmdlets in {0}' -f $File)
+                $Modules | ForEach-Object { Get-Command -Module $_.Name } | Select-Object Name, Parameters | Export-CliXml -Path $File
+            }
+            Else {
+		Write-Warning ('File {0} already exists' -f $File)
+            }
+        }
+    }
+    Else {
+        Write-Warning 'Microsoft.Graph.Beta.User not available, skipping'
     }
 
 }
